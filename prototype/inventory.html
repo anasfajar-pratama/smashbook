@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stock Barang · SmashBook</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">SB</div><div><div class="name">SmashBook</div><div class="sub">GOR Smash Arena</div></div></div>
+    <nav class="nav">
+      <div class="nav-title">Utama</div>
+      <a href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard</a>
+      <a href="bookings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>Booking Lapangan<span class="tag">3</span></a>
+      <a href="courts.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M12 7v10"/></svg>Lapangan &amp; Tarif</a>
+      <div class="nav-title">Penjualan</div>
+      <a href="pos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12h12L22 7H6"/></svg>POS Kasir</a>
+      <div class="nav-title">Keuangan</div>
+      <a href="cash.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Kas Harian</a>
+      <a href="purchase-orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Quick PO &amp; Biaya<span class="tag">2</span></a>
+      <a href="reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Laporan</a>
+      <div class="nav-title">Persediaan</div>
+      <a href="inventory.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 21V13"/></svg>Stock Barang</a>
+      <div class="nav-title">Master</div>
+      <a href="members.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Member</a>
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Daftar Halaman</a>
+    </nav>
+    <div class="sidebar-foot">v1.0 · Prototipe UI · Admin</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div><h1>Stock Barang</h1><div class="crumb">Persediaan, kartu stok, dan opname · Admin</div></div>
+      <div class="spacer"></div>
+      <button class="btn btn-sm" onclick="openModal('modalOpname')">Stock Opname</button>
+      <button class="btn btn-sm btn-primary" onclick="openModal('modalMasuk')">+ Stok Masuk</button>
+      <div class="user"><div class="avatar" style="background:linear-gradient(140deg,#3b82f6,#60a5fa)">AD</div><div><div class="nm">Admin GOR</div><div class="rl">Admin Operasional</div></div></div>
+    </header>
+
+    <div class="content">
+
+      <div class="grid g4">
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Nilai persediaan</span><span class="ico blue">📦</span></div>
+          <div class="val">Rp 12.480.000</div>
+          <div class="dlt neutral">38 SKU aktif · metode rata-rata bergerak</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Item di bawah minimum</span><span class="ico amber">⚠️</span></div>
+          <div class="val">3</div>
+          <div class="dlt down">Perlu segera dibeli</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Item stok habis</span><span class="ico red">🚫</span></div>
+          <div class="val">1</div>
+          <div class="dlt neutral">Kaos Smash Arena (M &amp; L)</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Akurasi opname terakhir</span><span class="ico brand">✅</span></div>
+          <div class="val">98,6%</div>
+          <div class="dlt neutral">1 Okt 2026 · selisih Rp 42.000</div>
+        </div>
+      </div>
+
+      <div class="alert warn">
+        <span class="ic">⚠️</span>
+        <div>
+          <b>3 item perlu dibeli ulang</b>
+          Shuttlecock Yonex AS-30 (sisa 6, min 10) · Air Mineral 600ml (sisa 18, min 48) · Isotonik 500ml (sisa 9, min 24).
+          <a href="purchase-orders.html" style="color:#92400e;text-decoration:underline;font-weight:700">Buat Quick PO →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="tabs" data-tabs="stok">
+          <button data-tab="daftar" class="on">Daftar Barang &amp; Stok</button>
+          <button data-tab="masuk">Stok Masuk</button>
+          <button data-tab="keluar">Stok Keluar / Internal</button>
+          <button data-tab="opname">Riwayat Opname</button>
+        </div>
+
+        <!-- DAFTAR BARANG -->
+        <div data-panel="stok/daftar">
+          <div class="card-b row wrap" style="gap:10px;border-bottom:1px solid var(--line)">
+            <div class="search" style="flex:1;min-width:230px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input class="input" placeholder="Cari SKU atau nama barang...">
+            </div>
+            <div class="row wrap" style="gap:6px">
+              <span class="chip on">Semua</span><span class="chip">Menipis</span><span class="chip">Habis</span><span class="chip">Aman</span>
+            </div>
+            <select class="select" style="width:170px">
+              <option>Semua kategori</option><option>Minuman</option>
+              <option>Shuttlecock</option><option>Aksesori</option><option>Apparel</option><option>Sewa</option><option>Jasa</option>
+            </select>
+            <button class="btn">Ekspor</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th>Barang</th><th>Kategori</th><th>Satuan</th><th class="num">Stok</th><th class="num">Min</th>
+                  <th class="num">Harga beli</th><th class="num">Harga jual</th><th class="num">Margin</th><th class="num">Nilai</th><th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="strong">Air Mineral 600ml</div><div class="muted mono">MNM-001</div></td>
+                  <td><span class="badge blue">Minuman</span></td>
+                  <td>botol <span class="muted">(1 dus = 24 botol)</span></td>
+                  <td class="num strong" style="color:#b45309">18</td><td class="num">48</td>
+                  <td class="num">Rp 3.100</td><td class="num">Rp 5.000</td>
+                  <td class="num" style="color:#047857">38%</td><td class="num">Rp 55.800</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalKartu')">Kartu Stok</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Shuttlecock Yonex AS-30</div><div class="muted mono">SHC-001</div></td>
+                  <td><span class="badge violet">Shuttlecock</span></td>
+                  <td>tube</td>
+                  <td class="num strong" style="color:#b91c1c">6</td><td class="num">10</td>
+                  <td class="num">Rp 32.000</td><td class="num">Rp 45.000</td>
+                  <td class="num" style="color:#047857">29%</td><td class="num">Rp 192.000</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalKartu')">Kartu Stok</button><button class="btn btn-sm btn-primary">PO</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Isotonik 500ml</div><div class="muted mono">MNM-004</div></td>
+                  <td><span class="badge blue">Minuman</span></td>
+                  <td>botol <span class="muted">(1 dus = 24 botol)</span></td>
+                  <td class="num strong" style="color:#b45309">9</td><td class="num">24</td>
+                  <td class="num">Rp 5.400</td><td class="num">Rp 8.000</td>
+                  <td class="num" style="color:#047857">33%</td><td class="num">Rp 48.600</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalKartu')">Kartu Stok</button><button class="btn btn-sm btn-primary">PO</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Shuttlecock Lokal (3 pcs)</div><div class="muted mono">SHC-004</div></td>
+                  <td><span class="badge violet">Shuttlecock</span></td>
+                  <td>pack</td>
+                  <td class="num strong">47</td><td class="num">20</td>
+                  <td class="num">Rp 11.500</td><td class="num">Rp 18.000</td>
+                  <td class="num" style="color:#047857">36%</td><td class="num">Rp 540.500</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalKartu')">Kartu Stok</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Grip Raket (per pcs)</div><div class="muted mono">AKS-002</div></td>
+                  <td><span class="badge grey">Aksesori</span></td>
+                  <td>pcs</td>
+                  <td class="num strong">28</td><td class="num">10</td>
+                  <td class="num">Rp 7.000</td><td class="num">Rp 12.000</td>
+                  <td class="num" style="color:#047857">42%</td><td class="num">Rp 196.000</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalKartu')">Kartu Stok</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Air Mineral 1500ml</div><div class="muted mono">MNM-002</div></td>
+                  <td><span class="badge blue">Minuman</span></td>
+                  <td>botol</td>
+                  <td class="num strong">26</td><td class="num">12</td>
+                  <td class="num">Rp 5.200</td><td class="num">Rp 8.000</td>
+                  <td class="num" style="color:#047857">35%</td><td class="num">Rp 135.200</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalKartu')">Kartu Stok</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Kopi Sachet Panas</div><div class="muted mono">MNM-006</div></td>
+                  <td><span class="badge blue">Minuman</span></td>
+                  <td>sachet</td>
+                  <td class="num strong">42</td><td class="num">20</td>
+                  <td class="num">Rp 3.800</td><td class="num">Rp 6.000</td>
+                  <td class="num" style="color:#047857">37%</td><td class="num">Rp 159.600</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalKartu')">Kartu Stok</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Kaos Smash Arena (M)</div><div class="muted mono">APP-001</div></td>
+                  <td><span class="badge grey">Apparel</span></td>
+                  <td>pcs</td>
+                  <td class="num strong" style="color:#b91c1c">0</td><td class="num">5</td>
+                  <td class="num">Rp 68.000</td><td class="num">Rp 95.000</td>
+                  <td class="num" style="color:#047857">28%</td><td class="num">Rp 0</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalKartu')">Kartu Stok</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Sewa Raket (unit)</div><div class="muted mono">SEW-001</div></td>
+                  <td><span class="badge cyan">Sewa</span></td>
+                  <td>unit</td>
+                  <td class="num strong">6</td><td class="num">4</td>
+                  <td class="num">—</td><td class="num">Rp 15.000/jam</td>
+                  <td class="num muted">—</td><td class="num muted">—</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Kelola Unit</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Jasa Stringing / Senar</div><div class="muted mono">JSA-001</div></td>
+                  <td><span class="badge dark">Jasa</span></td>
+                  <td>layanan</td>
+                  <td class="num muted">Tanpa stok</td><td class="num muted">—</td>
+                  <td class="num">Rp 42.000</td><td class="num">Rp 65.000</td>
+                  <td class="num" style="color:#047857">35%</td><td class="num muted">—</td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Ubah</button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-b row between" style="border-top:1px solid var(--line)">
+            <span class="muted-text">Menampilkan 10 dari 38 SKU · HPP memakai harga rata-rata bergerak</span>
+            <div class="row between" style="gap:26px">
+              <span class="muted-text">Total nilai persediaan</span>
+              <span class="strong" style="font-size:17px;color:#047857">Rp 12.480.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STOK MASUK -->
+        <div data-panel="stok/masuk" style="display:none">
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Tanggal</th><th>Barang</th><th class="num">Qty</th><th class="num">Harga beli</th><th>Sumber</th><th>Referensi</th><th>Petugas</th></tr></thead>
+              <tbody>
+                <tr><td class="nowrap">18 Okt 2026</td><td class="strong">Shuttlecock Lokal (3 pcs)</td><td class="num v in">+20 pack</td><td class="num">Rp 11.500</td><td><span class="badge blue">Penerimaan PO</span></td><td class="mono">PO-20261018-013</td><td>Admin</td></tr>
+                <tr><td class="nowrap">18 Okt 2026</td><td class="strong">Kopi Sachet Panas</td><td class="num v in">+2 dus (48)</td><td class="num">Rp 3.800</td><td><span class="badge blue">Penerimaan PO</span></td><td class="mono">PO-20261017-011</td><td>Admin</td></tr>
+                <tr><td class="nowrap">16 Okt 2026</td><td class="strong">Air Mineral 1500ml</td><td class="num v in">+24 botol</td><td class="num">Rp 5.200</td><td><span class="badge blue">Penerimaan PO</span></td><td class="mono">PO-20261015-009</td><td>Admin</td></tr>
+                <tr><td class="nowrap">14 Okt 2026</td><td class="strong">Grip Raket (per pcs)</td><td class="num v in">+20 pcs</td><td class="num">Rp 7.000</td><td><span class="badge blue">Penerimaan PO</span></td><td class="mono">PO-20261013-007</td><td>Admin</td></tr>
+                <tr><td class="nowrap">14 Okt 2026</td><td class="strong">Isotonik 500ml</td><td class="num v in">+3 botol</td><td class="num">Rp 5.400</td><td><span class="badge green">Retur penjualan</span></td><td class="mono">TRX-20261013-0028</td><td>Dewi</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- STOK KELUAR -->
+        <div data-panel="stok/keluar" style="display:none">
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Tanggal</th><th>Barang</th><th class="num">Qty</th><th>Alasan / Sumber</th><th>Referensi</th><th>Petugas</th></tr></thead>
+              <tbody>
+                <tr><td class="nowrap">18 Okt 2026</td><td class="strong">Air Mineral 600ml</td><td class="num v out">−3 botol</td><td><span class="badge violet">Penjualan POS</span></td><td class="mono">TRX-20261018-0038</td><td>Dewi</td></tr>
+                <tr><td class="nowrap">18 Okt 2026</td><td class="strong">Shuttlecock Yonex AS-30</td><td class="num v out">−1 tube</td><td><span class="badge violet">Penjualan POS</span></td><td class="mono">TRX-20261018-0038</td><td>Dewi</td></tr>
+                <tr><td class="nowrap">18 Okt 2026</td><td class="strong">Air Mineral 600ml</td><td class="num v out">−12 botol</td><td><span class="badge amber">Pemakaian internal — panitia turnamen</span></td><td class="mono">INT-20261018-0002</td><td>Admin</td></tr>
+                <tr><td class="nowrap">17 Okt 2026</td><td class="strong">Shuttlecock Yonex AS-30</td><td class="num v out">−2 tube</td><td><span class="badge red">Barang rusak</span></td><td class="mono">ADJ-20261017-0004</td><td>Admin</td></tr>
+                <tr><td class="nowrap">15 Okt 2026</td><td class="strong">Grip Raket (per pcs)</td><td class="num v out">−1 pcs</td><td><span class="badge amber">Komplimen pelanggan setia</span></td><td class="mono">INT-20261015-0001</td><td>Owner</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- RIWAYAT OPNAME -->
+        <div data-panel="stok/opname" style="display:none">
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Kode</th><th>Tanggal</th><th class="num">Item dihitung</th><th class="num">Selisih nilai</th><th>Petugas</th><th>Disetujui</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">OPN-202610-01</td><td class="nowrap">1 Okt 2026</td><td class="num">38</td><td class="num" style="color:#b45309">− Rp 42.000</td><td>Admin</td><td>Owner</td><td><span class="badge green">Final</span></td></tr>
+                <tr><td class="mono">OPN-202609-01</td><td class="nowrap">1 Sep 2026</td><td class="num">36</td><td class="num" style="color:#b45309">− Rp 18.500</td><td>Admin</td><td>Owner</td><td><span class="badge green">Final</span></td></tr>
+                <tr><td class="mono">OPN-202608-01</td><td class="nowrap">1 Agu 2026</td><td class="num">36</td><td class="num" style="color:#047857">Rp 0</td><td>Admin</td><td>Owner</td><td><span class="badge green">Final</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-b">
+            <div class="alert info">
+              <span class="ic">ℹ️</span>
+              <div><b>Setiap perubahan stok tercatat sebagai movement</b>Kolom stok tidak pernah diedit langsung — semua koreksi lewat stok masuk, stok keluar, atau adjustment opname dengan alasan.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: KARTU STOK ============ -->
+<div class="modal-mask" id="modalKartu">
+  <div class="modal wide">
+    <div class="modal-h">
+      <div><h3>Kartu Stok — Shuttlecock Yonex AS-30</h3><div class="sub">SHC-001 · tube · min 10 · lokasi: Gudang</div></div>
+      <button class="x" onclick="closeModal('modalKartu')">✕</button>
+    </div>
+    <div class="modal-b" style="padding:0">
+      <div class="card-b" style="border-bottom:1px solid var(--line)">
+        <div class="grid g4" style="gap:14px">
+          <div><div class="muted-text">Stok saat ini</div><div style="font-size:19px;font-weight:750;color:#b91c1c">6 tube</div></div>
+          <div><div class="muted-text">HPP rata-rata</div><div style="font-size:19px;font-weight:750">Rp 32.000</div></div>
+          <div><div class="muted-text">Nilai persediaan</div><div style="font-size:19px;font-weight:750">Rp 192.000</div></div>
+          <div><div class="muted-text">Terjual 30 hari</div><div style="font-size:19px;font-weight:750">24 tube</div></div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="tbl">
+          <thead>
+            <tr><th>Tanggal</th><th>Jenis</th><th>Keterangan</th><th class="num">Masuk</th><th class="num">Keluar</th><th class="num">HPP</th><th class="num">Saldo</th><th>Petugas</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="nowrap">18 Okt 16:31</td><td><span class="badge violet">OUT</span></td><td class="mono">TRX-20261018-0038</td><td class="num">—</td><td class="num v out">1</td><td class="num">32.000</td><td class="num strong">6</td><td>Dewi</td></tr>
+            <tr><td class="nowrap">17 Okt 20:15</td><td><span class="badge red">ADJUST</span></td><td>Barang rusak (bulu patah)</td><td class="num">—</td><td class="num v out">2</td><td class="num">32.000</td><td class="num strong">7</td><td>Admin</td></tr>
+            <tr><td class="nowrap">16 Okt 19:02</td><td><span class="badge violet">OUT</span></td><td class="mono">TRX-20261016-0055</td><td class="num">—</td><td class="num v out">3</td><td class="num">32.000</td><td class="num strong">9</td><td>Rudi</td></tr>
+            <tr><td class="nowrap">12 Okt 10:20</td><td><span class="badge green">IN</span></td><td class="mono">PO-20261011-008</td><td class="num v in">12</td><td class="num">—</td><td class="num">32.000</td><td class="num strong">12</td><td>Admin</td></tr>
+            <tr><td class="nowrap">5 Okt 09:11</td><td><span class="badge amber">ADJUST</span></td><td>Hasil opname OPN-202610-01</td><td class="num">—</td><td class="num v out">1</td><td class="num">31.500</td><td class="num strong">0</td><td>Admin</td></tr>
+            <tr><td class="nowrap">1 Okt 08:00</td><td><span class="badge grey">Saldo awal</span></td><td>Stok awal bulan</td><td class="num v in">1</td><td class="num">—</td><td class="num">31.500</td><td class="num strong">1</td><td>Sistem</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="modal-f">
+      <button class="btn" onclick="closeModal('modalKartu')">Tutup</button>
+      <button class="btn">Ekspor PDF</button>
+      <button class="btn btn-primary" onclick="closeModal('modalKartu');openModal('modalMasuk')">+ Stok Masuk</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: STOK MASUK ============ -->
+<div class="modal-mask" id="modalMasuk">
+  <div class="modal">
+    <div class="modal-h">
+      <div><h3>Stok Masuk</h3><div class="sub">Penerimaan barang, retur, atau koreksi masuk</div></div>
+      <button class="x" onclick="closeModal('modalMasuk')">✕</button>
+    </div>
+    <div class="modal-b">
+      <div class="form-grid">
+        <div class="field full">
+          <label>Barang</label>
+          <div class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input class="input" value="Air Mineral 600ml (MNM-001)">
+          </div>
+        </div>
+        <div class="field">
+          <label>Sumber</label>
+          <select class="select"><option>Penerimaan PO</option><option>Pembelian langsung</option><option>Retur penjualan</option><option>Koreksi / hibah</option></select>
+        </div>
+        <div class="field">
+          <label>Referensi PO</label>
+          <input class="input" placeholder="PO-20261018-014">
+        </div>
+        <div class="field">
+          <label>Qty masuk (satuan beli)</label>
+          <input class="input" value="5 dus">
+          <span class="hint">1 dus = 24 botol → 120 botol</span>
+        </div>
+        <div class="field">
+          <label>Harga beli per satuan</label>
+          <div class="money-input"><span class="rp">Rp</span><input class="input" value="74.400"></div>
+          <span class="hint">Per dus · Rp 3.100 per botol</span>
+        </div>
+        <div class="field">
+          <label>Tanggal terima</label>
+          <input class="input" type="date" value="2026-10-18">
+        </div>
+        <div class="field">
+          <label>Cara bayar</label>
+          <select class="select"><option>Tunai (kas shift)</option><option>Transfer</option><option>Kredit / tempo</option></select>
+        </div>
+        <div class="field full">
+          <label>Nomor batch / kedaluwarsa (opsional)</label>
+          <input class="input" placeholder="Contoh: EXP 12/2027">
+        </div>
+        <div class="field full">
+          <label>Foto nota</label>
+          <div class="row" style="gap:8px">
+            <button class="btn">📎 Lampirkan nota</button>
+            <span class="muted-text">Wajib untuk pembelian tunai di bawah Rp 500.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert ok" style="margin-top:14px">
+        <span class="ic">✓</span>
+        <div><b>Dampak yang akan terjadi</b>Stok 18 → 138 botol, HPP rata-rata diperbarui, dan kas shift keluar Rp 372.000 (bila tunai).</div>
+      </div>
+    </div>
+    <div class="modal-f">
+      <button class="btn" onclick="closeModal('modalMasuk')">Batal</button>
+      <button class="btn btn-primary" onclick="closeModal('modalMasuk')">Simpan Stok Masuk</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: STOCK OPNAME ============ -->
+<div class="modal-mask" id="modalOpname">
+  <div class="modal wide">
+    <div class="modal-h">
+      <div><h3>Stock Opname</h3><div class="sub">Hitung fisik per barang, sistem menghitung variance</div></div>
+      <button class="x" onclick="closeModal('modalOpname')">✕</button>
+    </div>
+    <div class="modal-b" style="padding:0">
+      <div class="card-b row wrap between" style="gap:12px;border-bottom:1px solid var(--line)">
+        <div class="row" style="gap:12px">
+          <div class="field"><label>Tanggal opname</label><input class="input" type="date" value="2026-10-18"></div>
+          <div class="field"><label>Kategori</label><select class="select"><option>Semua kategori</option><option>Minuman</option><option>Shuttlecock</option><option>Aksesoris</option></select></div>
+          <div class="field"><label>Metode</label><select class="select"><option>Hitung semua barang</option><option>Hitung barang terpilih</option></select></div>
+        </div>
+        <div class="right"><span class="badge amber">Draf</span></div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="tbl">
+          <thead>
+            <tr><th>Barang</th><th class="num">Stok sistem</th><th class="num">Hitung fisik</th><th class="num">Selisih</th><th class="num">Nilai selisih</th><th>Alasan</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="strong">Air Mineral 600ml</td><td class="num">18</td>
+              <td class="num"><input class="input" style="width:80px;text-align:right" value="18"></td>
+              <td class="num">0</td><td class="num">Rp 0</td>
+              <td class="muted">—</td>
+            </tr>
+            <tr>
+              <td class="strong">Shuttlecock Yonex AS-30</td><td class="num">6</td>
+              <td class="num"><input class="input" style="width:80px;text-align:right" value="5"></td>
+              <td class="num" style="color:#b91c1c">−1</td><td class="num" style="color:#b91c1c">− Rp 32.000</td>
+              <td><select class="select" style="width:150px"><option>Barang rusak</option><option>Hilang</option><option>Salah catat</option></select></td>
+            </tr>
+            <tr>
+              <td class="strong">Isotonik 500ml</td><td class="num">9</td>
+              <td class="num"><input class="input" style="width:80px;text-align:right" value="9"></td>
+              <td class="num">0</td><td class="num">Rp 0</td>
+              <td class="muted">—</td>
+            </tr>
+            <tr>
+              <td class="strong">Grip Raket (per pcs)</td><td class="num">28</td>
+              <td class="num"><input class="input" style="width:80px;text-align:right" value="30"></td>
+              <td class="num" style="color:#047857">+2</td><td class="num" style="color:#047857">+ Rp 14.000</td>
+              <td><select class="select" style="width:150px"><option>Salah catat</option><option>Retur belum dicatat</option></select></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card-b stack" style="border-top:1px solid var(--line)">
+        <div class="row between">
+          <span class="lbl muted-text">Total nilai selisih</span>
+          <span style="font-size:18px;font-weight:750;color:#b45309">− Rp 18.000</span>
+        </div>
+        <div class="alert warn">
+          <span class="ic">⚠️</span>
+          <div><b>Finalisasi opname akan membuat adjustment stok</b>Perubahan stok tercatat sebagai movement dengan alasan, dan tidak dapat dihapus (hanya dikoreksi dengan adjustment baru).</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-f">
+      <button class="btn" onclick="closeModal('modalOpname')">Batal</button>
+      <button class="btn">Simpan Draf</button>
+      <button class="btn btn-primary" onclick="closeModal('modalOpname')">Finalisasi Opname</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

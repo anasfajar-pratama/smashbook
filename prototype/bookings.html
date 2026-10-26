@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking Lapangan · SmashBook</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">SB</div>
+      <div><div class="name">SmashBook</div><div class="sub">GOR Smash Arena</div></div>
+    </div>
+    <nav class="nav">
+      <div class="nav-title">Utama</div>
+      <a href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard</a>
+      <a href="bookings.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>Booking Lapangan<span class="tag">3</span></a>
+      <a href="courts.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M12 7v10"/></svg>Lapangan &amp; Tarif</a>
+      <div class="nav-title">Penjualan</div>
+      <a href="pos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12h12L22 7H6"/></svg>POS Kasir</a>
+      <div class="nav-title">Keuangan</div>
+      <a href="cash.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Kas Harian</a>
+      <a href="purchase-orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Quick PO &amp; Biaya<span class="tag">2</span></a>
+      <a href="reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Laporan</a>
+      <div class="nav-title">Persediaan</div>
+      <a href="inventory.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 21V13"/></svg>Stock Barang</a>
+      <div class="nav-title">Master</div>
+      <a href="members.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Member</a>
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Daftar Halaman</a>
+    </nav>
+    <div class="sidebar-foot">v1.0 · Prototipe UI</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <h1>Booking Lapangan</h1>
+        <div class="crumb">Papan jadwal · Minggu, 18 Oktober 2026</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="shift-pill"><span class="dot"></span> Shift Sore · Kas Rp 1.245.000</div>
+      <button class="btn btn-sm btn-primary" onclick="openModal('modalBooking')">+ Booking Baru</button>
+      <div class="user">
+        <div class="avatar">DW</div>
+        <div><div class="nm">Dewi Kartika</div><div class="rl">Kasir · Shift Sore</div></div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Filter bar -->
+      <div class="card">
+        <div class="card-b row wrap" style="gap:12px">
+          <div class="field" style="min-width:160px">
+            <label>Tanggal</label>
+            <input class="input" type="date" value="2026-10-18">
+          </div>
+          <div class="field" style="min-width:150px">
+            <label>Lapangan</label>
+            <select class="select">
+              <option>Semua lapangan</option>
+              <option>Lapangan 1</option>
+              <option>Lapangan 2</option>
+              <option>Lapangan 3</option>
+              <option>Lapangan 4</option>
+            </select>
+          </div>
+          <div class="field" style="flex:1;min-width:180px">
+            <label>Status</label>
+            <div class="row wrap" style="gap:6px;padding-top:2px">
+              <span class="chip on">Semua</span>
+              <span class="chip">Tersedia</span>
+              <span class="chip">Hold</span>
+              <span class="chip">Belum bayar</span>
+            </div>
+          </div>
+          <div class="row" style="gap:8px;align-self:flex-end">
+            <button class="btn">‹ Hari ini</button>
+            <button class="btn">›</button>
+            <button class="btn btn-dark">Cari slot kosong</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="card">
+        <div class="tabs" data-tabs="jadwal">
+          <button data-tab="board" class="on">Papan Jadwal</button>
+          <button data-tab="list">Daftar Booking</button>
+          <button data-tab="recurring">Booking Berulang</button>
+          <button data-tab="policy">Kebijakan</button>
+        </div>
+
+        <!-- ===== PANEL: PAPAN JADWAL ===== -->
+        <div data-panel="jadwal/board">
+          <div class="card-b tight" style="padding:16px">
+            <div class="row wrap between" style="margin-bottom:12px">
+              <div class="legend">
+                <span><i style="background:#ecfdf5;border:1px solid #a7f3d0"></i>Member</span>
+                <span><i style="background:#eff6ff;border:1px solid #bfdbfe"></i>Umum / lunas</span>
+                <span><i style="background:#fffbeb;border:1px solid #fde68a"></i>Hold (15 menit)</span>
+                <span><i style="background:#fef2f2;border:1px solid #fecaca"></i>Jam ramai</span>
+              </div>
+              <span class="muted-text">Klik slot kosong untuk membuat booking · tarif weekend Rp 100.000/jam</span>
+            </div>
+
+            <div style="overflow-x:auto">
+              <div class="board">
+                <div class="hd">Jam</div>
+                <div class="hd">Lapangan 1</div>
+                <div class="hd">Lapangan 2</div>
+                <div class="hd">Lapangan 3</div>
+                <div class="hd">Lapangan 4</div>
+
+                <!-- 07:00 -->
+                <div class="tm">07:00</div>
+                <div class="slot"><div class="cell mb"><b>Budi Santoso</b><small>Member · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="2" data-hour="7" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="3" data-hour="7" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="7" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 08:00 -->
+                <div class="tm">08:00</div>
+                <div class="slot"><div class="cell mb"><b>Budi Santoso</b><small>Member · Lunas</small></div></div>
+                <div class="slot"><div class="cell mb"><b>Rina Wijaya</b><small>Member · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="3" data-hour="8" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="8" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 09:00 -->
+                <div class="tm">09:00</div>
+                <div class="slot"><div class="cell" data-court="1" data-hour="9" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell mb"><b>Rina Wijaya</b><small>Member · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="3" data-hour="9" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell hd"><b>Andi Pratama</b><small>Hold · 08:52</small></div></div>
+
+                <!-- 10:00 -->
+                <div class="tm">10:00</div>
+                <div class="slot"><div class="cell bk"><b>Klub Merah Putih</b><small>Umum · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="2" data-hour="10" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell bk"><b>Klub Merah Putih</b><small>Umum · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="10" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 11:00 -->
+                <div class="tm">11:00</div>
+                <div class="slot"><div class="cell bk"><b>Klub Merah Putih</b><small>Umum · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="2" data-hour="11" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell bk"><b>Klub Merah Putih</b><small>Umum · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="11" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 12:00 -->
+                <div class="tm">12:00</div>
+                <div class="slot"><div class="cell" data-court="1" data-hour="12" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="2" data-hour="12" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="3" data-hour="12" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="12" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 13:00 -->
+                <div class="tm">13:00</div>
+                <div class="slot"><div class="cell" data-court="1" data-hour="13" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell mb"><b>Rina Wijaya</b><small>Member · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="3" data-hour="13" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="13" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 14:00 -->
+                <div class="tm">14:00</div>
+                <div class="slot"><div class="cell" data-court="1" data-hour="14" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell mb"><b>Rina Wijaya</b><small>Member · Lunas</small></div></div>
+                <div class="slot"><div class="cell" data-court="3" data-hour="14" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="14" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 15:00 -->
+                <div class="tm">15:00</div>
+                <div class="slot"><div class="cell" data-court="1" data-hour="15" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="2" data-hour="15" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="3" data-hour="15" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="15" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 16:00 -->
+                <div class="tm">16:00</div>
+                <div class="slot"><div class="cell" data-court="1" data-hour="16" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell bk"><b>Hendra (walk-in)</b><small>Umum · Tunai</small></div></div>
+                <div class="slot"><div class="cell" data-court="3" data-hour="16" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot"><div class="cell" data-court="4" data-hour="16" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 17:00 -->
+                <div class="tm peak-row">17:00</div>
+                <div class="slot peak-row"><div class="cell" data-court="1" data-hour="17" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Hendra (walk-in)</b><small>Umum · Tunai</small></div></div>
+                <div class="slot peak-row"><div class="cell" data-court="3" data-hour="17" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell" data-court="4" data-hour="17" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 18:00 -->
+                <div class="tm peak-row">18:00</div>
+                <div class="slot peak-row"><div class="cell bk"><b>Komunitas Smash</b><small>DP 50% · Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell hd"><b>Andi Pratama</b><small>Hold · 16 menit</small></div></div>
+                <div class="slot peak-row"><div class="cell" data-court="3" data-hour="18" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell" data-court="4" data-hour="18" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+
+                <!-- 19:00 -->
+                <div class="tm peak-row">19:00</div>
+                <div class="slot peak-row"><div class="cell bk"><b>Komunitas Smash</b><small>DP 50% · Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Deni Kurniawan</b><small>Umum · Belum bayar</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Klub Merah Putih</b><small>Umum · Lunas</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Andi Pratama</b><small>Umum · Lunas</small></div></div>
+
+                <!-- 20:00 -->
+                <div class="tm peak-row">20:00</div>
+                <div class="slot peak-row"><div class="cell bk"><b>Siti Nurhaliza</b><small>Member · Lunas</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Deni Kurniawan</b><small>Umum · Belum bayar</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Klub Merah Putih</b><small>Umum · Lunas</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Andi Pratama</b><small>Umum · Lunas</small></div></div>
+
+                <!-- 21:00 -->
+                <div class="tm peak-row">21:00</div>
+                <div class="slot peak-row"><div class="cell bk"><b>Siti Nurhaliza</b><small>Member · Lunas</small></div></div>
+                <div class="slot peak-row"><div class="cell" data-court="2" data-hour="21" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell" data-court="3" data-hour="21" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Komunitas Bugar</b><small>Umum · Lunas</small></div></div>
+
+                <!-- 22:00 -->
+                <div class="tm peak-row">22:00</div>
+                <div class="slot peak-row"><div class="cell" data-court="1" data-hour="22" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell" data-court="2" data-hour="22" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell" data-court="3" data-hour="22" onclick="pickSlot(this)"><b>Tersedia</b><small>Rp 100.000</small></div></div>
+                <div class="slot peak-row"><div class="cell bk"><b>Komunitas Bugar</b><small>Umum · Lunas</small></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-b" style="border-top:1px solid var(--line)">
+            <div class="grid g4" style="gap:14px">
+              <div><div class="muted-text">Okupansi hari ini</div><div style="font-size:19px;font-weight:750">78%</div></div>
+              <div><div class="muted-text">Nilai booking terkonfirmasi</div><div style="font-size:19px;font-weight:750">Rp 3.240.000</div></div>
+              <div><div class="muted-text">Belum dibayar</div><div style="font-size:19px;font-weight:750;color:#b45309">Rp 400.000</div></div>
+              <div><div class="muted-text">Hold aktif</div><div style="font-size:19px;font-weight:750;color:#b45309">1 slot</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PANEL: DAFTAR BOOKING ===== -->
+        <div data-panel="jadwal/list" style="display:none">
+          <div class="card-b row wrap" style="gap:10px;border-bottom:1px solid var(--line)">
+            <div class="search" style="flex:1;min-width:220px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input class="input" placeholder="Cari kode booking, nama, atau nomor HP...">
+            </div>
+            <select class="select" style="width:170px">
+              <option>Semua status</option>
+              <option>Confirmed</option>
+              <option>Checked-in</option>
+              <option>Completed</option>
+              <option>Cancelled</option>
+              <option>No-show</option>
+            </select>
+            <button class="btn">Ekspor CSV</button>
+          </div>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th>Kode</th><th>Penyewa</th><th>Lapangan</th><th>Jadwal</th>
+                  <th>Tipe</th><th class="num">Total</th><th class="num">Dibayar</th><th>Status</th><th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono">BK-20261018-0042</td>
+                  <td><div class="strong">Hendra (walk-in)</div><div class="muted">0812-3344-5566</div></td>
+                  <td>Lapangan 2</td><td class="nowrap">18 Okt · 16:00–18:00</td>
+                  <td><span class="badge grey">Umum</span></td>
+                  <td class="num strong">Rp 200.000</td><td class="num">Rp 200.000</td>
+                  <td><span class="badge green">Lunas</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalBooking')">Detail</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">BK-20261018-0041</td>
+                  <td><div class="strong">Komunitas Smash</div><div class="muted">0811-2233-8899</div></td>
+                  <td>Lapangan 1</td><td class="nowrap">18 Okt · 18:00–20:00</td>
+                  <td><span class="badge grey">Umum</span></td>
+                  <td class="num strong">Rp 200.000</td><td class="num">Rp 100.000</td>
+                  <td><span class="badge amber">DP 50%</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Bayar</button><button class="btn btn-sm">Check-in</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">BK-20261018-0040</td>
+                  <td><div class="strong">Rina Wijaya</div><div class="muted">MBR-00012 · Member Bulanan</div></td>
+                  <td>Lapangan 2</td><td class="nowrap">18 Okt · 13:00–15:00</td>
+                  <td><span class="badge green">Member</span></td>
+                  <td class="num"><span class="strike">Rp 200.000</span> <strong>Rp 180.000</strong></td>
+                  <td class="num">Rp 180.000</td><td><span class="badge green">Selesai</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Detail</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">BK-20261018-0039</td>
+                  <td><div class="strong">Budi Santoso</div><div class="muted">MBR-00003 · Member Bulanan</div></td>
+                  <td>Lapangan 1</td><td class="nowrap">18 Okt · 07:00–09:00</td>
+                  <td><span class="badge green">Member</span></td>
+                  <td class="num"><span class="strike">Rp 200.000</span> <strong>Rp 180.000</strong></td>
+                  <td class="num">Rp 180.000</td><td><span class="badge blue">Checked-in</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Check-out</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">BK-20261018-0038</td>
+                  <td><div class="strong">Deni Kurniawan</div><div class="muted">0857-1122-3344</div></td>
+                  <td>Lapangan 2</td><td class="nowrap">18 Okt · 19:00–21:00</td>
+                  <td><span class="badge grey">Umum</span></td>
+                  <td class="num strong">Rp 200.000</td><td class="num">Rp 0</td>
+                  <td><span class="badge red">Belum bayar</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Bayar</button><button class="btn btn-sm btn-danger">Batal</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">BK-20261017-0031</td>
+                  <td><div class="strong">Ahmad Fauzi</div><div class="muted">0821-9988-7766</div></td>
+                  <td>Lapangan 3</td><td class="nowrap">17 Okt · 20:00–22:00</td>
+                  <td><span class="badge grey">Umum</span></td>
+                  <td class="num strong">Rp 180.000</td><td class="num">Rp 0</td>
+                  <td><span class="badge red">No-show</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Detail</button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===== PANEL: BOOKING BERULANG ===== -->
+        <div data-panel="jadwal/recurring" style="display:none">
+          <div class="card-b">
+            <div class="alert info" style="margin-bottom:14px">
+              <span class="ic">ℹ️</span>
+              <div>
+                <b>Jadwal rutin dibuat otomatis tiap 30 hari ke depan</b>
+                Sistem membuat booking pada tanggal yang sesuai, dan melewatkan tanggal yang slotnya sudah terisi.
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr><th>Pengguna</th><th>Lapangan</th><th>Hari &amp; jam</th><th>Periode</th><th class="num">Nilai/bulan</th><th>Status</th><th></th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="strong">Komunitas Smash</td><td>Lapangan 1</td>
+                    <td class="nowrap">Setiap Selasa · 19:00–21:00</td>
+                    <td class="nowrap">1 Okt – 31 Des 2026</td>
+                    <td class="num strong">Rp 720.000</td>
+                    <td><span class="badge green">Aktif</span></td>
+                    <td><div class="tbl-actions"><button class="btn btn-sm">Ubah</button><button class="btn btn-sm btn-danger">Hentikan</button></div></td>
+                  </tr>
+                  <tr>
+                    <td class="strong">Klub Merah Putih</td><td>Lapangan 3</td>
+                    <td class="nowrap">Setiap Sabtu · 10:00–12:00</td>
+                    <td class="nowrap">1 Sep – 28 Feb 2027</td>
+                    <td class="num strong">Rp 800.000</td>
+                    <td><span class="badge green">Aktif</span></td>
+                    <td><div class="tbl-actions"><button class="btn btn-sm">Ubah</button><button class="btn btn-sm btn-danger">Hentikan</button></div></td>
+                  </tr>
+                  <tr>
+                    <td class="strong">Budi Santoso</td><td>Lapangan 1</td>
+                    <td class="nowrap">Setiap Minggu · 07:00–09:00</td>
+                    <td class="nowrap">1 Okt – 31 Okt 2026</td>
+                    <td class="num strong">Rp 780.000</td>
+                    <td><span class="badge amber">Berakhir 27 Okt</span></td>
+                    <td><div class="tbl-actions"><button class="btn btn-sm">Perpanjang</button></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row" style="margin-top:14px;justify-content:flex-end">
+              <button class="btn btn-primary">+ Jadwal Rutin Baru</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PANEL: KEBIJAKAN ===== -->
+        <div data-panel="jadwal/policy" style="display:none">
+          <div class="card-b grid g2">
+            <div class="stack">
+              <h4>Kebijakan pembatalan</h4>
+              <div class="table-wrap">
+                <table class="tbl">
+                  <thead><tr><th>Waktu batal</th><th>Refund</th></tr></thead>
+                  <tbody>
+                    <tr><td>≥ 24 jam sebelum jadwal</td><td class="strong">100% / pindah jadwal gratis</td></tr>
+                    <tr><td>6–24 jam sebelum jadwal</td><td class="strong">50%</td></tr>
+                    <tr><td>&lt; 6 jam sebelum jadwal</td><td class="strong">0% (hangus)</td></tr>
+                    <tr><td>No-show</td><td class="strong">0% + catatan pelanggaran</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="alert warn">
+                <span class="ic">⚠️</span>
+                <div><b>3× no-show dalam 30 hari</b>Member otomatis masuk status <em>perlu konfirmasi</em> — booking berikutnya wajib DP.</div>
+              </div>
+            </div>
+            <div class="stack">
+              <h4>Batas &amp; aturan booking</h4>
+              <div class="field"><label>Durasi minimum</label><input class="input" value="1 jam (kelipatan 30 menit)"></div>
+              <div class="field"><label>Booking di muka — umum</label><input class="input" value="14 hari"></div>
+              <div class="field"><label>Booking di muka — member</label><input class="input" value="30 hari"></div>
+              <div class="field"><label>Masa berlaku hold (belum bayar)</label><input class="input" value="15 menit"></div>
+              <div class="field"><label>DP wajib untuk non-member</label><input class="input" value="50% untuk booking ≥ 2 jam di jam ramai"></div>
+              <div class="row" style="justify-content:flex-end"><button class="btn btn-primary">Simpan kebijakan</button></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: BOOKING ============ -->
+<div class="modal-mask" id="modalBooking">
+  <div class="modal wide">
+    <div class="modal-h">
+      <div>
+        <h3>Booking Lapangan</h3>
+        <div class="sub">Minggu, 18 Oktober 2026 · cek ketersediaan otomatis saat disimpan</div>
+      </div>
+      <button class="x" onclick="closeModal('modalBooking')">✕</button>
+    </div>
+
+    <div class="modal-b">
+      <div class="grid g-3-2" style="gap:18px">
+
+        <div class="stack" style="gap:14px">
+          <div class="form-grid">
+            <div class="field full">
+              <label>Penyewa</label>
+              <div class="row" style="gap:8px">
+                <div class="search" style="flex:1">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+                  <input class="input" id="b_nama" placeholder="Cari member (nama / HP) atau isi nama walk-in">
+                </div>
+                <button class="btn" title="Scan kartu member">📷 Scan</button>
+              </div>
+              <span class="hint">Ketik minimal 3 karakter. Member otomatis mendapat diskon sesuai paket.</span>
+            </div>
+
+            <div class="field">
+              <label>Tipe penyewa</label>
+              <select class="select" id="b_tipe" onchange="hitungBooking()">
+                <option value="umum">Umum / non-member</option>
+                <option value="member">Member (diskon 10%)</option>
+                <option value="komunitas">Komunitas (tarif khusus)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Sumber booking</label>
+              <select class="select">
+                <option>Telepon</option>
+                <option>Datang langsung (walk-in)</option>
+                <option>WhatsApp</option>
+              </select>
+              <span class="hint">Booking hanya diterima lewat telepon, WhatsApp, atau kunjungan langsung — tidak ada pemesanan mandiri online.</span>
+            </div>
+
+            <div class="field">
+              <label>No. HP / WhatsApp</label>
+              <input class="input" placeholder="0812xxxxxxx">
+            </div>
+
+            <div class="field">
+              <label>Hari / kategori tarif</label>
+              <select class="select" id="b_hari" onchange="hitungBooking()">
+                <option value="weekend">Minggu — Weekend/libur (Rp 100.000/jam)</option>
+                <option value="weekday">Senin–Jumat (off-peak &amp; prime)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Tanggal main</label>
+              <input class="input" type="date" value="2026-10-18">
+            </div>
+
+            <div class="field">
+              <label>Lapangan</label>
+              <select class="select" id="b_lapangan">
+                <option value="1">Lapangan 1</option>
+                <option value="2">Lapangan 2</option>
+                <option value="3">Lapangan 3</option>
+                <option value="4">Lapangan 4</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Jam mulai</label>
+              <select class="select" id="b_mulai" onchange="hitungBooking()">
+                <option value="7">07:00</option><option value="8">08:00</option>
+                <option value="9">09:00</option><option value="10">10:00</option>
+                <option value="11">11:00</option><option value="12">12:00</option>
+                <option value="13">13:00</option><option value="14">14:00</option>
+                <option value="15">15:00</option><option value="16">16:00</option>
+                <option value="17">17:00</option><option value="18">18:00</option>
+                <option value="19">19:00</option><option value="20">20:00</option>
+                <option value="21">21:00</option><option value="22">22:00</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Durasi</label>
+              <select class="select" id="b_durasi" onchange="hitungBooking()">
+                <option value="1">1 jam</option><option value="2" selected>2 jam</option>
+                <option value="3">3 jam</option><option value="4">4 jam</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label><input type="checkbox"> Jadikan jadwal rutin (berulang mingguan)</label>
+            </div>
+
+            <div class="field full">
+              <label>Catatan</label>
+              <textarea class="input" rows="2" placeholder="Contoh: minta net diganti, butuh 2 kursi tambahan."></textarea>
+            </div>
+          </div>
+
+          <div class="alert ok">
+            <span class="ic">✓</span>
+            <div><b>Slot tersedia</b>Lapangan 2, 16:00–18:00 pada 18 Oktober 2026 belum terisi.</div>
+          </div>
+        </div>
+
+        <!-- Rincian harga -->
+        <div class="stack">
+          <div class="card" style="box-shadow:none">
+            <div class="card-h"><h3>Rincian harga</h3></div>
+            <div class="card-b" id="b_rincian"></div>
+          </div>
+
+          <div class="card" style="box-shadow:none">
+            <div class="card-h"><h3>Pembayaran</h3></div>
+            <div class="card-b stack" style="gap:12px">
+              <div class="pay-methods">
+                <div class="pay on">Tunai<small>Kas shift aktif</small></div>
+                <div class="pay">QRIS<small>Transfer instan</small></div>
+                <div class="pay">Deposit<small>Saldo member</small></div>
+              </div>
+              <div class="field">
+                <label>Jumlah dibayar sekarang</label>
+                <div class="money-input">
+                  <span class="rp">Rp</span>
+                  <input class="input" id="b_dp" value="100.000">
+                </div>
+              </div>
+              <div class="field">
+                <label>Total tagihan</label>
+                <input class="input" id="b_total" value="200.000" readonly>
+              </div>
+              <div class="row wrap" style="gap:6px">
+                <span class="chip on">Bayar DP 50%</span>
+                <span class="chip">Lunas</span>
+                <span class="chip">Bayar di tempat</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal-f">
+      <button class="btn" onclick="closeModal('modalBooking')">Batal</button>
+      <button class="btn" onclick="closeModal('modalBooking')">Simpan sebagai hold (15 mnt)</button>
+      <button class="btn btn-primary" onclick="closeModal('modalBooking')">Konfirmasi &amp; cetak bukti</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

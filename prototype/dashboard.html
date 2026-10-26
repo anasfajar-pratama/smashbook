@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · SmashBook</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">SB</div>
+      <div>
+        <div class="name">SmashBook</div>
+        <div class="sub">GOR Smash Arena</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-title">Utama</div>
+      <a href="dashboard.html" class="active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+        Dashboard
+      </a>
+      <a href="bookings.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+        Booking Lapangan
+        <span class="tag">3</span>
+      </a>
+      <a href="courts.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M12 7v10"/></svg>
+        Lapangan &amp; Tarif
+      </a>
+
+      <div class="nav-title">Penjualan</div>
+      <a href="pos.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12h12L22 7H6"/></svg>
+        POS Kasir
+      </a>
+
+      <div class="nav-title">Keuangan</div>
+      <a href="cash.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg>
+        Kas Harian
+      </a>
+      <a href="purchase-orders.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
+        Quick PO &amp; Biaya
+        <span class="tag">2</span>
+      </a>
+      <a href="reports.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+        Laporan
+      </a>
+
+      <div class="nav-title">Persediaan</div>
+      <a href="inventory.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 21V13"/></svg>
+        Stock Barang
+      </a>
+
+      <div class="nav-title">Master</div>
+      <a href="members.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        Member
+      </a>
+      <a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        Daftar Halaman
+      </a>
+    </nav>
+
+    <div class="sidebar-foot">
+      v1.0 · Prototipe UI<br>Hostinger · cloud
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+
+    <header class="topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <div class="crumb">Ringkasan operasional · Minggu, 18 Oktober 2026</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="shift-pill"><span class="dot"></span> Shift Sore · Kas Rp 1.245.000</div>
+      <button class="btn btn-sm" title="Notifikasi">🔔</button>
+      <div class="user">
+        <div class="avatar">DW</div>
+        <div>
+          <div class="nm">Dewi Kartika</div>
+          <div class="rl">Kasir · Shift Sore</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- KPI -->
+      <div class="grid g4">
+        <div class="card kpi">
+          <div class="row between">
+            <span class="lbl">Pendapatan hari ini</span>
+            <span class="ico brand">💰</span>
+          </div>
+          <div class="val">Rp 4.860.000</div>
+          <div class="dlt up">▲ 12,4% vs rata-rata Minggu</div>
+        </div>
+
+        <div class="card kpi">
+          <div class="row between">
+            <span class="lbl">Okupansi lapangan</span>
+            <span class="ico blue">📊</span>
+          </div>
+          <div class="val">78%</div>
+          <div class="row" style="gap:9px">
+            <div class="bar" style="flex:1"><span style="width:78%"></span></div>
+            <span class="muted-text">42/54 jam</span>
+          </div>
+        </div>
+
+        <div class="card kpi">
+          <div class="row between">
+            <span class="lbl">Transaksi POS</span>
+            <span class="ico violet">🧾</span>
+          </div>
+          <div class="val">37</div>
+          <div class="dlt neutral">ATV Rp 42.700 · 3 item laris</div>
+        </div>
+
+        <div class="card kpi">
+          <div class="row between">
+            <span class="lbl">Selisih kas</span>
+            <span class="ico brand">✅</span>
+          </div>
+          <div class="val">Rp 0</div>
+          <div class="dlt up">Seimbang · 2 shift terverifikasi</div>
+        </div>
+      </div>
+
+      <!-- Grafik + aktivitas -->
+      <div class="grid g-2-1">
+
+        <div class="card">
+          <div class="card-h">
+            <div>
+              <h3>Pendapatan 7 hari terakhir</h3>
+              <div class="sub">Sewa lapangan vs penjualan POS</div>
+            </div>
+            <div class="right">
+              <div class="legend">
+                <span><i style="background:#10b981"></i>Sewa lapangan</span>
+                <span><i style="background:#3b82f6"></i>POS</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-b">
+            <div class="chart">
+              <div class="col"><div class="bars"><i style="height:48%"></i><i class="pos" style="height:18%"></i></div><div class="cap">Sen</div></div>
+              <div class="col"><div class="bars"><i style="height:55%"></i><i class="pos" style="height:21%"></i></div><div class="cap">Sel</div></div>
+              <div class="col"><div class="bars"><i style="height:44%"></i><i class="pos" style="height:16%"></i></div><div class="cap">Rab</div></div>
+              <div class="col"><div class="bars"><i style="height:61%"></i><i class="pos" style="height:24%"></i></div><div class="cap">Kam</div></div>
+              <div class="col"><div class="bars"><i style="height:82%"></i><i class="pos" style="height:31%"></i></div><div class="cap">Jum</div></div>
+              <div class="col"><div class="bars"><i style="height:96%"></i><i class="pos" style="height:38%"></i></div><div class="cap">Sab</div></div>
+              <div class="col"><div class="bars"><i style="height:88%"></i><i class="pos" style="height:33%"></i></div><div class="cap">Min</div></div>
+            </div>
+            <div class="divider" style="margin:14px 0 12px"></div>
+            <div class="grid g3" style="gap:12px">
+              <div>
+                <div class="muted-text">Total minggu ini</div>
+                <div style="font-size:17px;font-weight:750">Rp 31.940.000</div>
+              </div>
+              <div>
+                <div class="muted-text">Sewa lapangan</div>
+                <div style="font-size:17px;font-weight:750;color:#047857">Rp 24.180.000</div>
+              </div>
+              <div>
+                <div class="muted-text">POS</div>
+                <div style="font-size:17px;font-weight:750;color:#1d4ed8">Rp 7.760.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><h3>Aktivitas terbaru</h3></div>
+          <div class="card-b tight">
+            <div class="list-item">
+              <div class="ic ico brand">✓</div>
+              <div class="t"><b>Bayar booking BK-20261018-0042</b><small>Lapangan 2 · 16:00–18:00 · Rp 200.000 tunai</small></div>
+              <small class="muted-text nowrap">16:12</small>
+            </div>
+            <div class="list-item">
+              <div class="ic ico violet">🧾</div>
+              <div class="t"><b>TRX-20261018-0037 · POS</b><small>2× Air mineral, 1× Yonex AS-30</small></div>
+              <small class="muted-text nowrap">16:04</small>
+            </div>
+            <div class="list-item">
+              <div class="ic ico amber">📝</div>
+              <div class="t"><b>PO-20261018-014 diajukan</b><small>Air minum 5 dus · Rp 375.000</small></div>
+              <small class="muted-text nowrap">15:48</small>
+            </div>
+            <div class="list-item">
+              <div class="ic ico blue">📅</div>
+              <div class="t"><b>Booking berulang dibuat</b><small>Komunitas Bugar · tiap Selasa 19:00</small></div>
+              <small class="muted-text nowrap">15:31</small>
+            </div>
+            <div class="list-item">
+              <div class="ic ico red">⚠️</div>
+              <div class="t"><b>Stok shuttlecock menipis</b><small>Sisa 6 tube · min. 10 tube</small></div>
+              <small class="muted-text nowrap">15:20</small>
+            </div>
+            <div class="list-item">
+              <div class="ic ico brand">🔑</div>
+              <div class="t"><b>Shift Sore dibuka</b><small>Modal awal Rp 300.000 · Dewi</small></div>
+              <small class="muted-text nowrap">15:02</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jadwal hari ini + side panel -->
+      <div class="grid g-2-1">
+
+        <div class="card">
+          <div class="card-h">
+            <div>
+              <h3>Jadwal lapangan hari ini</h3>
+              <div class="sub">Minggu (weekend) — tarif Rp 100.000/jam</div>
+            </div>
+            <div class="right">
+              <a class="btn btn-sm" href="bookings.html">Buka papan jadwal</a>
+            </div>
+          </div>
+          <div class="card-b tight">
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Jam</th><th>Lapangan</th><th>Penyewa</th><th>Status</th><th class="num">Nilai</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="strong nowrap">08:00–10:00</td><td>Lapangan 1</td>
+                    <td>Budi Santoso <span class="badge green">Member</span></td>
+                    <td><span class="badge blue">Checked-in</span></td>
+                    <td class="num strong">Rp 180.000</td>
+                  </tr>
+                  <tr>
+                    <td class="strong nowrap">10:00–12:00</td><td>Lapangan 3</td>
+                    <td>Klub Merah Putih</td>
+                    <td><span class="badge green">Selesai</span></td>
+                    <td class="num strong">Rp 200.000</td>
+                  </tr>
+                  <tr>
+                    <td class="strong nowrap">13:00–15:00</td><td>Lapangan 2</td>
+                    <td>Rina Wijaya <span class="badge green">Member</span></td>
+                    <td><span class="badge green">Selesai</span></td>
+                    <td class="num strong">Rp 180.000</td>
+                  </tr>
+                  <tr>
+                    <td class="strong nowrap">16:00–18:00</td><td>Lapangan 2</td>
+                    <td>Hendra (walk-in)</td>
+                    <td><span class="badge green">Lunas</span></td>
+                    <td class="num strong">Rp 200.000</td>
+                  </tr>
+                  <tr>
+                    <td class="strong nowrap">18:00–20:00</td><td>Lapangan 1</td>
+                    <td>Komunitas Smash</td>
+                    <td><span class="badge amber">DP 50%</span></td>
+                    <td class="num strong">Rp 200.000</td>
+                  </tr>
+                  <tr>
+                    <td class="strong nowrap">19:00–21:00</td><td>Lapangan 4</td>
+                    <td>Andi Pratama</td>
+                    <td><span class="badge violet">Hold · 12 mnt</span></td>
+                    <td class="num strong">Rp 200.000</td>
+                  </tr>
+                  <tr>
+                    <td class="strong nowrap">20:00–22:00</td><td>Lapangan 1</td>
+                    <td>— (kosong)</td>
+                    <td><span class="badge grey">Tersedia</span></td>
+                    <td class="num muted">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="card-h">
+              <h3>⚠️ Stok menipis</h3>
+              <div class="right"><a class="btn btn-sm btn-primary" href="purchase-orders.html">Quick PO</a></div>
+            </div>
+            <div class="card-b tight">
+              <div class="list-item">
+                <div class="ic ico red">🏸</div>
+                <div class="t"><b>Yonex AS-30</b><small>6 tube · minimum 10</small></div>
+                <span class="badge red">Kurang 4</span>
+              </div>
+              <div class="list-item">
+                <div class="ic ico amber">💧</div>
+                <div class="t"><b>Air Mineral 600ml</b><small>18 botol · minimum 48</small></div>
+                <span class="badge amber">Kurang 30</span>
+              </div>
+              <div class="list-item">
+                <div class="ic ico amber">🥤</div>
+                <div class="t"><b>Isotonik 500ml</b><small>9 botol · minimum 24</small></div>
+                <span class="badge amber">Kurang 15</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-h">
+              <h3>PO menunggu approval</h3>
+              <div class="right"><span class="badge amber">2 dokumen</span></div>
+            </div>
+            <div class="card-b tight">
+              <div class="list-item">
+                <div class="ic ico amber">📝</div>
+                <div class="t"><b>PO-20261018-014</b><small>Air minum 5 dus · Supplier Warung Bu Tini</small></div>
+                <div class="right">
+                  <div class="strong">Rp 375.000</div>
+                  <button class="btn btn-sm" onclick="openModal('modalApproval')">Tinjau</button>
+                </div>
+              </div>
+              <div class="list-item">
+                <div class="ic ico amber">📝</div>
+                <div class="t"><b>PO-20261018-012</b><small>Perbaikan lampu lapangan 3</small></div>
+                <div class="right">
+                  <div class="strong">Rp 1.250.000</div>
+                  <button class="btn btn-sm" onclick="openModal('modalApproval')">Tinjau</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-h"><h3>Okupansi per jam</h3></div>
+            <div class="card-b stack">
+              <div>
+                <div class="row between"><span class="muted-text">07:00–11:00</span><span class="strong">62%</span></div>
+                <div class="bar" style="margin-top:5px"><span style="width:62%"></span></div>
+              </div>
+              <div>
+                <div class="row between"><span class="muted-text">11:00–15:00</span><span class="strong">48%</span></div>
+                <div class="bar" style="margin-top:5px"><span class="amber" style="width:48%"></span></div>
+              </div>
+              <div>
+                <div class="row between"><span class="muted-text">15:00–19:00</span><span class="strong">91%</span></div>
+                <div class="bar" style="margin-top:5px"><span style="width:91%"></span></div>
+              </div>
+              <div>
+                <div class="row between"><span class="muted-text">19:00–23:00</span><span class="strong">100%</span></div>
+                <div class="bar" style="margin-top:5px"><span class="blue" style="width:100%"></span></div>
+              </div>
+              <p class="muted-text">Jam 11:00–15:00 paling sepi — kandidat promo jam sepi (diskon 30%).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: APPROVAL PO ============ -->
+<div class="modal-mask" id="modalApproval">
+  <div class="modal">
+    <div class="modal-h">
+      <div>
+        <h3>Tinjau Purchase Order</h3>
+        <div class="sub">PO-20261018-012 · diajukan Admin pada 15:48</div>
+      </div>
+      <button class="x" onclick="closeModal('modalApproval')">✕</button>
+    </div>
+    <div class="modal-b stack">
+      <div class="alert warn">
+        <span class="ic">⚠️</span>
+        <div>
+          <b>Nominal melebihi threshold Admin (Rp 500.000)</b>
+          PO ini memerlukan persetujuan Owner. Alasan pengajuan wajib diisi.
+        </div>
+      </div>
+
+      <div class="grid g2" style="gap:12px">
+        <div><div class="muted-text">Supplier</div><div class="strong">CV Terang Elektrik</div></div>
+        <div><div class="muted-text">Jenis</div><div class="strong">Biaya / Jasa (tidak masuk stok)</div></div>
+        <div><div class="muted-text">Tanggal dibutuhkan</div><div class="strong">20 Oktober 2026</div></div>
+        <div><div class="muted-text">Pembayaran</div><div class="strong">Tunai</div></div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="tbl">
+          <thead><tr><th>Deskripsi</th><th class="num">Qty</th><th class="num">Harga</th><th class="num">Jumlah</th></tr></thead>
+          <tbody>
+            <tr><td>Lampu LED sorot 200W (lap. 3)</td><td class="num">2</td><td class="num">Rp 450.000</td><td class="num strong">Rp 900.000</td></tr>
+            <tr><td>Jasa pemasangan &amp; kabel</td><td class="num">1</td><td class="num">Rp 350.000</td><td class="num strong">Rp 350.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="field">
+        <label>Catatan approval</label>
+        <textarea class="input" rows="2" placeholder="Contoh: disetujui, lampu lapangan 3 sudah redup sejak minggu lalu."></textarea>
+      </div>
+    </div>
+    <div class="modal-f">
+      <button class="btn btn-danger" onclick="closeModal('modalApproval')">Tolak</button>
+      <button class="btn" onclick="closeModal('modalApproval')">Simpan draf</button>
+      <button class="btn btn-primary" onclick="closeModal('modalApproval')">Setujui PO</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

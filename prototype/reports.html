@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laporan · SmashBook</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">SB</div><div><div class="name">SmashBook</div><div class="sub">GOR Smash Arena</div></div></div>
+    <nav class="nav">
+      <div class="nav-title">Utama</div>
+      <a href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard</a>
+      <a href="bookings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>Booking Lapangan<span class="tag">3</span></a>
+      <a href="courts.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M12 7v10"/></svg>Lapangan &amp; Tarif</a>
+      <div class="nav-title">Penjualan</div>
+      <a href="pos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12h12L22 7H6"/></svg>POS Kasir</a>
+      <div class="nav-title">Keuangan</div>
+      <a href="cash.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Kas Harian</a>
+      <a href="purchase-orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Quick PO &amp; Biaya<span class="tag">2</span></a>
+      <a href="reports.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Laporan</a>
+      <div class="nav-title">Persediaan</div>
+      <a href="inventory.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 21V13"/></svg>Stock Barang</a>
+      <div class="nav-title">Master</div>
+      <a href="members.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Member</a>
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Daftar Halaman</a>
+    </nav>
+    <div class="sidebar-foot">v1.0 · Prototipe UI · Owner</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div><h1>Laporan</h1><div class="crumb">Analisis operasional &amp; keuangan · Oktober 2026</div></div>
+      <div class="spacer"></div>
+      <button class="btn btn-sm">Refresh data</button>
+      <button class="btn btn-sm btn-primary">Ekspor PDF</button>
+      <div class="user"><div class="avatar" style="background:linear-gradient(140deg,#8b5cf6,#a78bfa)">OW</div><div><div class="nm">Pemilik GOR</div><div class="rl">Owner</div></div></div>
+    </header>
+
+    <div class="content">
+
+      <!-- Filter periode -->
+      <div class="card">
+        <div class="card-b row wrap" style="gap:12px">
+          <div class="field" style="min-width:150px"><label>Dari tanggal</label><input class="input" type="date" value="2026-10-01"></div>
+          <div class="field" style="min-width:150px"><label>s/d tanggal</label><input class="input" type="date" value="2026-10-18"></div>
+          <div class="field" style="min-width:170px"><label>Perbandingan</label><select class="select"><option>Periode sebelumnya</option><option>Bulan lalu</option><option>Tahun lalu</option><option>Tanpa perbandingan</option></select></div>
+          <div class="field" style="min-width:170px"><label>Kelompokkan per</label><select class="select"><option>Hari</option><option>Minggu</option><option selected>Bulan</option></select></div>
+          <div class="row" style="gap:8px;align-self:flex-end">
+            <button class="btn btn-dark">Terapkan</button>
+            <button class="btn">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI utama -->
+      <div class="grid g4">
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Total pendapatan</span><span class="ico brand">💰</span></div>
+          <div class="val">Rp 78.420.000</div>
+          <div class="dlt up">▲ 14,2% vs periode sebelumnya</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Laba kotor</span><span class="ico blue">📈</span></div>
+          <div class="val">Rp 61.180.000</div>
+          <div class="dlt up">▲ 11,8% · margin 78%</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Biaya operasional</span><span class="ico red">📉</span></div>
+          <div class="val">Rp 14.200.000</div>
+          <div class="dlt down">▲ 4,1% (listrik naik)</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Laba bersih</span><span class="ico violet">🏆</span></div>
+          <div class="val">Rp 46.980.000</div>
+          <div class="dlt up">▲ 13,6% · margin 60%</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="tabs" data-tabs="rep">
+          <button data-tab="pendapatan" class="on">Pendapatan</button>
+          <button data-tab="occupancy">Okupansi Lapangan</button>
+          <button data-tab="kas">Kas &amp; Selisih</button>
+          <button data-tab="stok">Stok &amp; Laba POS</button>
+          <button data-tab="member">Member</button>
+          <button data-tab="labarugi">Laba Rugi</button>
+        </div>
+
+        <!-- PENDAPATAN -->
+        <div data-panel="rep/pendapatan">
+          <div class="card-b stack" style="gap:16px">
+            <div class="grid g3">
+              <div>
+                <div class="muted-text">Sewa lapangan</div>
+                <div style="font-size:20px;font-weight:750;color:#047857">Rp 59.400.000</div>
+                <div class="bar" style="margin-top:6px"><span style="width:76%"></span></div>
+                <div class="muted-text" style="margin-top:5px">76% dari total</div>
+              </div>
+              <div>
+                <div class="muted-text">Penjualan POS</div>
+                <div style="font-size:20px;font-weight:750;color:#1d4ed8">Rp 14.820.000</div>
+                <div class="bar" style="margin-top:6px"><span class="blue" style="width:19%"></span></div>
+                <div class="muted-text" style="margin-top:5px">19% dari total</div>
+              </div>
+              <div>
+                <div class="muted-text">Membership</div>
+                <div style="font-size:20px;font-weight:750;color:#6d28d9">Rp 4.200.000</div>
+                <div class="bar" style="margin-top:6px"><span class="violet" style="width:5%"></span></div>
+                <div class="muted-text" style="margin-top:5px">5% dari total</div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h4>Pendapatan harian 18 hari terakhir</h4>
+            <div class="chart">
+              <div class="col"><div class="bars"><i style="height:42%"></i><i class="pos" style="height:14%"></i></div><div class="cap">1</div></div>
+              <div class="col"><div class="bars"><i style="height:48%"></i><i class="pos" style="height:16%"></i></div><div class="cap">2</div></div>
+              <div class="col"><div class="bars"><i style="height:52%"></i><i class="pos" style="height:15%"></i></div><div class="cap">3</div></div>
+              <div class="col"><div class="bars"><i style="height:96%"></i><i class="pos" style="height:34%"></i></div><div class="cap">4</div></div>
+              <div class="col"><div class="bars"><i style="height:100%"></i><i class="pos" style="height:38%"></i></div><div class="cap">5</div></div>
+              <div class="col"><div class="bars"><i style="height:46%"></i><i class="pos" style="height:15%"></i></div><div class="cap">6</div></div>
+              <div class="col"><div class="bars"><i style="height:50%"></i><i class="pos" style="height:18%"></i></div><div class="cap">7</div></div>
+              <div class="col"><div class="bars"><i style="height:55%"></i><i class="pos" style="height:20%"></i></div><div class="cap">8</div></div>
+              <div class="col"><div class="bars"><i style="height:58%"></i><i class="pos" style="height:19%"></i></div><div class="cap">9</div></div>
+              <div class="col"><div class="bars"><i style="height:61%"></i><i class="pos" style="height:22%"></i></div><div class="cap">10</div></div>
+              <div class="col"><div class="bars"><i style="height:100%"></i><i class="pos" style="height:36%"></i></div><div class="cap">11</div></div>
+              <div class="col"><div class="bars"><i style="height:98%"></i><i class="pos" style="height:34%"></i></div><div class="cap">12</div></div>
+              <div class="col"><div class="bars"><i style="height:54%"></i><i class="pos" style="height:17%"></i></div><div class="cap">13</div></div>
+              <div class="col"><div class="bars"><i style="height:57%"></i><i class="pos" style="height:19%"></i></div><div class="cap">14</div></div>
+              <div class="col"><div class="bars"><i style="height:60%"></i><i class="pos" style="height:21%"></i></div><div class="cap">15</div></div>
+              <div class="col"><div class="bars"><i style="height:59%"></i><i class="pos" style="height:20%"></i></div><div class="cap">16</div></div>
+              <div class="col"><div class="bars"><i style="height:63%"></i><i class="pos" style="height:23%"></i></div><div class="cap">17</div></div>
+              <div class="col"><div class="bars"><i style="height:88%"></i><i class="pos" style="height:33%"></i></div><div class="cap">18</div></div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead><tr><th>Periode</th><th class="num">Sewa lapangan</th><th class="num">POS</th><th class="num">Membership</th><th class="num">Total</th></tr></thead>
+                <tbody>
+                  <tr><td class="strong">1–7 Okt</td><td class="num">Rp 22.140.000</td><td class="num">Rp 5.480.000</td><td class="num">Rp 1.900.000</td><td class="num strong">Rp 29.520.000</td></tr>
+                  <tr><td class="strong">8–14 Okt</td><td class="num">Rp 22.860.000</td><td class="num">Rp 5.610.000</td><td class="num">Rp 1.050.000</td><td class="num strong">Rp 29.520.000</td></tr>
+                  <tr><td class="strong">15–18 Okt</td><td class="num">Rp 14.400.000</td><td class="num">Rp 3.730.000</td><td class="num">Rp 1.250.000</td><td class="num strong">Rp 19.380.000</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- OCCUPANCY -->
+        <div data-panel="rep/occupancy" style="display:none">
+          <div class="card-b stack" style="gap:16px">
+            <div class="grid g4">
+              <div><div class="muted-text">Okupansi rata-rata</div><div style="font-size:20px;font-weight:750">72%</div><div class="bar" style="margin-top:6px"><span style="width:72%"></span></div></div>
+              <div><div class="muted-text">Jam tersedia</div><div style="font-size:20px;font-weight:750">1.020 jam</div><div class="muted-text">4 lapangan × 17 jam × 15 hari</div></div>
+              <div><div class="muted-text">Jam terpakai</div><div style="font-size:20px;font-weight:750">734 jam</div></div>
+              <div><div class="muted-text">Pendapatan per jam</div><div style="font-size:20px;font-weight:750;color:#047857">Rp 80.900</div></div>
+            </div>
+
+            <h4>Okupansi per jam (rata-rata hari kerja vs weekend)</h4>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead><tr><th>Slot jam</th><th class="num">Hari kerja</th><th class="num">Weekend</th><th class="num">Pendapatan/jam</th><th>Catatan</th></tr></thead>
+                <tbody>
+                  <tr><td>07:00–09:00</td><td class="num">54%</td><td class="num">88%</td><td class="num">Rp 66.000</td><td class="muted">Prima pagi weekend</td></tr>
+                  <tr><td>09:00–11:00</td><td class="num">41%</td><td class="num">78%</td><td class="num">Rp 58.000</td><td class="muted">Kandidat promo hari kerja</td></tr>
+                  <tr><td>11:00–13:00</td><td class="num">28%</td><td class="num">62%</td><td class="num">Rp 44.000</td><td><span class="badge amber">Paling sepi</span></td></tr>
+                  <tr><td>13:00–15:00</td><td class="num">33%</td><td class="num">70%</td><td class="num">Rp 51.000</td><td class="muted">Potensi promo jam sepi</td></tr>
+                  <tr><td>15:00–17:00</td><td class="num">72%</td><td class="num">86%</td><td class="num">Rp 84.000</td><td class="muted">Mulai ramai</td></tr>
+                  <tr><td>17:00–19:00</td><td class="num">94%</td><td class="num">92%</td><td class="num">Rp 102.000</td><td><span class="badge red">Hampir penuh</span></td></tr>
+                  <tr><td>19:00–21:00</td><td class="num">100%</td><td class="num">96%</td><td class="num">Rp 108.000</td><td><span class="badge red">Selalu penuh</span></td></tr>
+                  <tr><td>21:00–23:00</td><td class="num">63%</td><td class="num">74%</td><td class="num">Rp 79.000</td><td class="muted">Masih sehat</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="grid g2" style="gap:16px">
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Okupansi per lapangan</h3></div>
+                <div class="card-b tight">
+                  <div class="list-item"><div class="ic ico brand">1</div><div class="t"><b>Lapangan 1</b><small>Premium · karpet</small></div><span class="strong">84%</span></div>
+                  <div class="list-item"><div class="ic ico brand">2</div><div class="t"><b>Lapangan 2</b><small>Premium · karpet</small></div><span class="strong">71%</span></div>
+                  <div class="list-item"><div class="ic ico blue">3</div><div class="t"><b>Lapangan 3</b><small>Standar · semen</small></div><span class="strong">66%</span></div>
+                  <div class="list-item"><div class="ic ico blue">4</div><div class="t"><b>Lapangan 4</b><small>Standar · semen</small></div><span class="strong">41%</span></div>
+                </div>
+              </div>
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Rekomendasi</h3></div>
+                <div class="card-b stack" style="gap:10px;">
+                  <div class="alert ok"><span class="ic">💡</span><div><b>Tambahkan tarif prime malam</b>Jam 19:00–21:00 selalu penuh. Pertimbangkan kenaikan Rp 10.000/jam atau batasi booking maksimal 2 jam.</div></div>
+                  <div class="alert info"><span class="ic">💡</span><div><b>Promo jam sepi 11:00–15:00 hari kerja</b>Okupansi hanya 28–33%. Promo 30% dapat menaikkan volume tanpa mengganggu jam ramai.</div></div>
+                  <div class="alert warn"><span class="ic">💡</span><div><b>Evaluasi Lapangan 4</b>Okupansi 41% dan sempat perawatan. Periksa kualitas lapangan atau alihkan ke tarif lebih rendah.</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KAS -->
+        <div data-panel="rep/kas" style="display:none">
+          <div class="card-b stack" style="gap:16px">
+            <div class="grid g4">
+              <div><div class="muted-text">Total tunai diterima</div><div style="font-size:20px;font-weight:750">Rp 52.180.000</div></div>
+              <div><div class="muted-text">Total non-tunai</div><div style="font-size:20px;font-weight:750">Rp 26.240.000</div></div>
+              <div><div class="muted-text">Total pengeluaran tunai</div><div style="font-size:20px;font-weight:750;color:#b91c1c">Rp 3.940.000</div></div>
+              <div><div class="muted-text">Selisih kas kumulatif</div><div style="font-size:20px;font-weight:750;color:#b45309">− Rp 48.000</div></div>
+            </div>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead><tr><th>Petugas</th><th class="num">Jumlah shift</th><th class="num">Tunai masuk</th><th class="num">Selisih kumulatif</th><th class="num">Rata-rata selisih/shift</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td class="strong">Dewi Kartika</td><td class="num">15</td><td class="num">Rp 21.400.000</td><td class="num" style="color:#047857">Rp 0</td><td class="num">Rp 0</td><td><span class="badge green">Bersih</span></td></tr>
+                  <tr><td class="strong">Andi Saputra</td><td class="num">14</td><td class="num">Rp 18.900.000</td><td class="num" style="color:#047857">+ Rp 2.000</td><td class="num">Rp 143</td><td><span class="badge green">Bersih</span></td></tr>
+                  <tr><td class="strong">Rudi Hartono</td><td class="num">13</td><td class="num">Rp 11.880.000</td><td class="num" style="color:#b91c1c">− Rp 50.000</td><td class="num">− Rp 3.846</td><td><span class="badge amber">Perlu perhatian</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert warn">
+              <span class="ic">⚠️</span>
+              <div><b>Catatan audit kas</b>Rudi memiliki selisih kumulatif −Rp 50.000 dalam 13 shift. Dua selisih terbesar sudah dikoreksi dengan jurnal penyesuaian dan bukti transfer QRIS.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STOK -->
+        <div data-panel="rep/stok" style="display:none">
+          <div class="card-b stack" style="gap:16px">
+            <div class="grid g4">
+              <div><div class="muted-text">Nilai persediaan akhir</div><div style="font-size:20px;font-weight:750">Rp 12.480.000</div></div>
+              <div><div class="muted-text">Pembelian bulan ini</div><div style="font-size:20px;font-weight:750">Rp 8.470.000</div></div>
+              <div><div class="muted-text">HPP POS bulan ini</div><div style="font-size:20px;font-weight:750">Rp 9.640.000</div></div>
+              <div><div class="muted-text">Laba kotor POS</div><div style="font-size:20px;font-weight:750;color:#047857">Rp 5.180.000</div></div>
+            </div>
+            <h4>Laba kotor per kategori POS</h4>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead><tr><th>Kategori</th><th class="num">Penjualan</th><th class="num">HPP</th><th class="num">Laba kotor</th><th class="num">Margin</th></tr></thead>
+                <tbody>
+                  <tr><td class="strong">Minuman</td><td class="num">Rp 7.240.000</td><td class="num">Rp 4.610.000</td><td class="num strong">Rp 2.630.000</td><td class="num" style="color:#047857">36%</td></tr>
+                  <tr><td class="strong">Shuttlecock</td><td class="num">Rp 4.180.000</td><td class="num">Rp 2.910.000</td><td class="num strong">Rp 1.270.000</td><td class="num" style="color:#047857">30%</td></tr>
+                  <tr><td class="strong">Aksesori</td><td class="num">Rp 1.460.000</td><td class="num">Rp 880.000</td><td class="num strong">Rp 580.000</td><td class="num" style="color:#047857">40%</td></tr>
+                  <tr><td class="strong">Sewa raket</td><td class="num">Rp 690.000</td><td class="num">Rp 0</td><td class="num strong">Rp 690.000</td><td class="num" style="color:#047857">100%</td></tr>
+                  <tr><td class="strong">Jasa stringing</td><td class="num">Rp 1.250.000</td><td class="num">Rp 620.000</td><td class="num strong">Rp 630.000</td><td class="num" style="color:#047857">50%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Barang terlaris bulan ini</h4>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead><tr><th>Barang</th><th class="num">Qty terjual</th><th class="num">Penjualan</th><th class="num">Laba kotor</th><th class="num">Sisa stok</th></tr></thead>
+                <tbody>
+                  <tr><td class="strong">Air Mineral 600ml</td><td class="num">412 botol</td><td class="num">Rp 2.060.000</td><td class="num">Rp 780.000</td><td class="num" style="color:#b45309">18</td></tr>
+                  <tr><td class="strong">Shuttlecock Lokal (3 pcs)</td><td class="num">96 pack</td><td class="num">Rp 1.728.000</td><td class="num">Rp 624.000</td><td class="num">47</td></tr>
+                  <tr><td class="strong">Isotonik 500ml</td><td class="num">164 botol</td><td class="num">Rp 1.312.000</td><td class="num">Rp 426.000</td><td class="num" style="color:#b45309">9</td></tr>
+                  <tr><td class="strong">Yonex AS-30</td><td class="num">24 tube</td><td class="num">Rp 1.080.000</td><td class="num">Rp 312.000</td><td class="num" style="color:#b91c1c">6</td></tr>
+                  <tr><td class="strong">Kopi Sachet Panas</td><td class="num">138 sachet</td><td class="num">Rp 828.000</td><td class="num">Rp 303.000</td><td class="num">42</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- MEMBER -->
+        <div data-panel="rep/member" style="display:none">
+          <div class="card-b stack" style="gap:16px">
+            <div class="grid g4">
+              <div><div class="muted-text">Member aktif</div><div style="font-size:20px;font-weight:750">146</div></div>
+              <div><div class="muted-text">Member baru bulan ini</div><div style="font-size:20px;font-weight:750;color:#047857">8</div></div>
+              <div><div class="muted-text">Member berhenti (churn)</div><div style="font-size:20px;font-weight:750;color:#b91c1c">4</div></div>
+              <div><div class="muted-text">Pendapatan dari member</div><div style="font-size:20px;font-weight:750">Rp 31.600.000</div></div>
+            </div>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead><tr><th>Paket</th><th class="num">Member</th><th class="num">Pendapatan paket</th><th class="num">Perpanjangan</th><th class="num">Tingkat perpanjangan</th><th class="num">Rata-rata booking/bulan</th></tr></thead>
+                <tbody>
+                  <tr><td class="strong">Member Bulanan</td><td class="num">42</td><td class="num">Rp 10.500.000</td><td class="num">31</td><td class="num" style="color:#047857">74%</td><td class="num">6,2×</td></tr>
+                  <tr><td class="strong">Member 3 Bulan</td><td class="num">31</td><td class="num">Rp 6.700.000</td><td class="num">19</td><td class="num" style="color:#047857">61%</td><td class="num">5,4×</td></tr>
+                  <tr><td class="strong">Member Tahunan</td><td class="num">18</td><td class="num">Rp 13.200.000</td><td class="num">16</td><td class="num" style="color:#047857">89%</td><td class="num">7,1×</td></tr>
+                  <tr><td class="strong">Komunitas</td><td class="num">5</td><td class="num">Rp 1.200.000</td><td class="num">5</td><td class="num" style="color:#047857">100%</td><td class="num">12,4×</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="grid g2" style="gap:16px">
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Member paling aktif</h3></div>
+                <div class="card-b tight">
+                  <div class="list-item"><div class="ic ico brand">1</div><div class="t"><b>Komunitas Smash</b><small>31 booking · Rp 2.940.000 belanja POS</small></div><span class="badge violet">Komunitas</span></div>
+                  <div class="list-item"><div class="ic ico brand">2</div><div class="t"><b>Budi Santoso</b><small>24 booking · Rp 1.180.000 belanja POS</small></div><span class="badge green">Tahunan</span></div>
+                  <div class="list-item"><div class="ic ico blue">3</div><div class="t"><b>Rina Wijaya</b><small>18 booking · Rp 640.000 belanja POS</small></div><span class="badge green">Bulanan</span></div>
+                </div>
+              </div>
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Perlu tindak lanjut</h3></div>
+                <div class="card-b tight">
+                  <div class="list-item"><div class="ic ico amber">⏳</div><div class="t"><b>11 member akan habis 7 hari</b><small>Reminder WhatsApp terkirim</small></div><button class="btn btn-sm">Kirim ulang</button></div>
+                  <div class="list-item"><div class="ic ico red">📵</div><div class="t"><b>4 member churn</b><small>Tidak memperpanjang 2 bulan berturut</small></div><button class="btn btn-sm">Follow-up</button></div>
+                  <div class="list-item"><div class="ic ico red">⚠️</div><div class="t"><b>1 member perlu konfirmasi</b><small>3× no-show dalam 30 hari</small></div><button class="btn btn-sm">Tinjau</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LABA RUGI -->
+        <div data-panel="rep/labarugi" style="display:none">
+          <div class="card-b">
+            <div class="row between" style="margin-bottom:14px">
+              <h4>Laba Rugi Sederhana — Oktober 2026</h4>
+              <span class="badge dark">Belum diaudit</span>
+            </div>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead><tr><th>Komponen</th><th class="num">Nominal</th><th class="num">% Pendapatan</th></tr></thead>
+                <tbody>
+                  <tr><td class="strong">PENDAPATAN</td><td class="num"></td><td class="num"></td></tr>
+                  <tr><td style="padding-left:28px">Sewa lapangan</td><td class="num">Rp 59.400.000</td><td class="num">75,7%</td></tr>
+                  <tr><td style="padding-left:28px">Penjualan POS</td><td class="num">Rp 14.820.000</td><td class="num">18,9%</td></tr>
+                  <tr><td style="padding-left:28px">Membership &amp; komunitas</td><td class="num">Rp 4.200.000</td><td class="num">5,4%</td></tr>
+                  <tr style="background:#f8fafc"><td class="strong">Total pendapatan</td><td class="num strong">Rp 78.420.000</td><td class="num strong">100%</td></tr>
+
+                  <tr><td class="strong" style="padding-top:14px">HARGA POKOK PENJUALAN</td><td class="num"></td><td class="num"></td></tr>
+                  <tr><td style="padding-left:28px">HPP barang POS</td><td class="num">− Rp 9.640.000</td><td class="num">12,3%</td></tr>
+                  <tr style="background:#f8fafc"><td class="strong">Laba kotor</td><td class="num strong" style="color:#047857">Rp 68.780.000</td><td class="num strong">87,7%</td></tr>
+
+                  <tr><td class="strong" style="padding-top:14px">BIAYA OPERASIONAL</td><td class="num"></td><td class="num"></td></tr>
+                  <tr><td style="padding-left:28px">Listrik &amp; air</td><td class="num">− Rp 4.980.000</td><td class="num">6,4%</td></tr>
+                  <tr><td style="padding-left:28px">Gaji &amp; upah</td><td class="num">− Rp 4.400.000</td><td class="num">5,6%</td></tr>
+                  <tr><td style="padding-left:28px">Sewa lahan &amp; bangunan</td><td class="num">− Rp 3.500.000</td><td class="num">4,5%</td></tr>
+                  <tr><td style="padding-left:28px">Perawatan lapangan &amp; peralatan</td><td class="num">− Rp 640.000</td><td class="num">0,8%</td></tr>
+                  <tr><td style="padding-left:28px">Internet, CCTV &amp; kebersihan</td><td class="num">− Rp 775.000</td><td class="num">1,0%</td></tr>
+                  <tr><td style="padding-left:28px">Selisih kas &amp; lain-lain</td><td class="num">− Rp 48.000</td><td class="num">0,1%</td></tr>
+                  <tr style="background:#f8fafc"><td class="strong">Total biaya operasional</td><td class="num strong" style="color:#b91c1c">− Rp 14.343.000</td><td class="num strong">18,3%</td></tr>
+
+                  <tr style="background:#ecfdf5">
+                    <td class="strong">LABA BERSIH</td>
+                    <td class="num strong" style="color:#047857;font-size:16px">Rp 54.437.000</td>
+                    <td class="num strong">69,4%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="grid g3" style="margin-top:16px;gap:14px">
+              <div class="card" style="box-shadow:none">
+                <div class="card-b">
+                  <div class="muted-text">Titik impas (BEP) bulanan</div>
+                  <div style="font-size:18px;font-weight:750">Rp 14.343.000</div>
+                  <div class="muted-text" style="margin-top:4px">Setara ± 145 jam sewa atau 287 transaksi POS</div>
+                </div>
+              </div>
+              <div class="card" style="box-shadow:none">
+                <div class="card-b">
+                  <div class="muted-text">BEP tercapai pada</div>
+                  <div style="font-size:18px;font-weight:750">tanggal 5</div>
+                  <div class="muted-text" style="margin-top:4px">Setelah itu seluruh pendapatan = laba</div>
+                </div>
+              </div>
+              <div class="card" style="box-shadow:none">
+                <div class="card-b">
+                  <div class="muted-text">Margin laba bersih</div>
+                  <div style="font-size:18px;font-weight:750;color:#047857">69,4%</div>
+                  <div class="muted-text" style="margin-top:4px">Sehat untuk operasional GOR</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alert info" style="margin-top:16px">
+              <span class="ic">ℹ️</span>
+              <div><b>Catatan</b>Laporan ini adalah laba-rugi sederhana berbasis kas operasional, bukan laporan akuntansi penuh (belum termasuk penyusutan aset, pajak, dan akrual). Konsultasikan dengan akuntan untuk pelaporan pajak.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

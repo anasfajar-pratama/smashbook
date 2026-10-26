@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daftar Halaman · SmashBook</title>
+<link rel="stylesheet" href="assets/app.css">
+<style>
+  .hero {
+    background: linear-gradient(150deg, #062019 0%, #0b1220 60%, #0f172a 100%);
+    color: #fff; border-radius: 18px; padding: 34px 32px; position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; width: 420px; height: 420px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(16,185,129,.3), transparent 65%);
+    right: -120px; top: -160px;
+  }
+  .hero h2 { font-size: 27px; letter-spacing: -.02em; }
+  .hero p { color: #a7f3d0; margin-top: 8px; max-width: 620px; }
+  .page-card {
+    display: block; background: #fff; border: 1px solid var(--line); border-radius: var(--r);
+    box-shadow: var(--shadow); padding: 16px; transition: transform .12s, box-shadow .12s, border-color .12s;
+  }
+  .page-card:hover { transform: translateY(-2px); border-color: var(--brand); box-shadow: 0 18px 34px -18px rgba(15,23,42,.4); }
+  .page-card .top { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+  .page-card .num {
+    width: 27px; height: 27px; border-radius: 8px; background: var(--brand-soft); color: #047857;
+    display: grid; place-items: center; font-weight: 750; font-size: 12px; flex: none;
+  }
+  .page-card h4 { font-size: 14.5px; }
+  .page-card p { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .page-card .open { font-size: 12px; color: #059669; font-weight: 650; margin-top: 10px; display: inline-block; }
+</style>
+</head>
+<body>
+
+<div class="content" style="max-width:1180px;margin:0 auto;padding:26px">
+
+  <div class="hero">
+    <div class="brand" style="border:0;padding:0">
+      <div class="logo">SB</div>
+      <div><div class="name">SmashBook</div><div class="sub">Prototipe Sistem Pengelolaan Lapangan Badminton</div></div>
+    </div>
+    <h2 style="margin-top:18px">Prototipe antarmuka — 10 halaman inti</h2>
+    <p>
+      Semua halaman di bawah ini adalah prototipe HTML statis (tanpa backend) dengan data contoh GOR
+      Smash Arena. Buka file-nya langsung di browser untuk melihat alur kerja tiap modul.
+      Sistem dirancang berjalan pada <b>hosting Hostinger</b> (tanpa server lokal) dengan kanal booking
+      <b>telepon, WhatsApp, dan kunjungan langsung</b> — tanpa halaman pemesanan publik.
+    </p>
+    <div class="row wrap" style="gap:10px;margin-top:20px;position:relative;z-index:1">
+      <a class="btn btn-primary" href="login.html">Mulai dari Login</a>
+      <a class="btn" href="dashboard.html" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff">Masuk Dashboard</a>
+      <a class="btn" href="../surat-penawaran.html" style="background:transparent;border-color:rgba(255,255,255,.25);color:#a7f3d0">Lihat Surat Penawaran</a>
+    </div>
+  </div>
+
+  <div class="grid g3" style="margin-top:20px">
+
+    <a class="page-card" href="login.html">
+      <div class="top"><span class="num">1</span><h4>Login &amp; Akses Peran</h4></div>
+      <p>Masuk dengan akun pribadi per peran (Owner, Admin, Kasir, Operator) + PIN untuk approval cepat.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="dashboard.html">
+      <div class="top"><span class="num">2</span><h4>Dashboard Owner</h4></div>
+      <p>KPI pendapatan, okupansi, jumlah transaksi, selisih kas, grafik 7 hari, alert stok, dan PO menunggu approval.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="bookings.html">
+      <div class="top"><span class="num">3</span><h4>Booking &amp; Papan Jadwal</h4></div>
+      <p>Grid jam × lapangan, booking walk-in/member, kalkulasi tarif peak/off-peak, hold 15 menit, jadwal berulang, kebijakan refund.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="courts.html">
+      <div class="top"><span class="num">4</span><h4>Master Lapangan &amp; Tarif</h4></div>
+      <p>Data lapangan, aturan tarif off-peak/prime/night/weekend, promo jam sepi, hari libur nasional, jam operasional.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="pos.html">
+      <div class="top"><span class="num">5</span><h4>POS Kasir</h4></div>
+      <p>Katalog produk ramah sentuh, keranjang, diskon ber-PIN, multi-metode bayar, split payment, struk thermal, void/retur.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="cash.html">
+      <div class="top"><span class="num">6</span><h4>Kas Harian &amp; Tutup Shift</h4></div>
+      <p>Sesi kas per shift, mutasi tunai otomatis, hitung fisik per pecahan, selisih kas, rekap harian, setoran bank.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="purchase-orders.html">
+      <div class="top"><span class="num">7</span><h4>Quick PO &amp; Biaya Operasional</h4></div>
+      <p>Pengadaan cepat 1 layar, approval berjenjang (threshold), penerimaan parsial, biaya rutin otomatis, data supplier.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="inventory.html">
+      <div class="top"><span class="num">8</span><h4>Stock Barang</h4></div>
+      <p>Daftar stok &amp; HPP, kartu stok, stok masuk/keluar, pemakaian internal, stock opname dengan variance.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="members.html">
+      <div class="top"><span class="num">9</span><h4>Kelola Member</h4></div>
+      <p>Data member, paket membership &amp; benefit, masa aktif, saldo deposit, riwayat booking/belanja, sanksi no-show.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="reports.html">
+      <div class="top"><span class="num">10</span><h4>Laporan &amp; Analisis</h4></div>
+      <p>Pendapatan, okupansi per jam &amp; per lapangan, audit selisih kas, laba POS, retensi member, laba rugi sederhana + BEP.</p>
+      <span class="open">Buka halaman →</span>
+    </a>
+
+    <a class="page-card" href="../surat-penawaran.html" style="border-color:#a7f3d0;background:#f6fffb">
+      <div class="top"><span class="num" style="background:#065f46;color:#fff">📄</span><h4>Surat Penawaran</h4></div>
+      <p>Dokumen penawaran resmi: lingkup pekerjaan, rincian biaya, jadwal pelaksanaan, termin pembayaran, garansi &amp; S&amp;K.</p>
+      <span class="open">Buka dokumen →</span>
+    </a>
+
+    <div class="page-card" style="border-color:#bfdbfe;background:#f8fbff;cursor:default">
+      <div class="top"><span class="num" style="background:#dbeafe;color:#1d4ed8">📘</span><h4>Dokumen Desain</h4></div>
+      <p>Rujukan teknis lengkap ada di folder <span class="mono">docs/</span>:</p>
+      <div class="stack" style="gap:5px;margin-top:8px;font-size:12.5px">
+        <span class="mono">docs/design.md</span>
+        <span class="mono">docs/implementasi.md</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:20px">
+    <div class="card-h"><h3>Cakupan 6 modul inti yang diwakili prototipe ini</h3></div>
+    <div class="card-b">
+      <div class="grid g3" style="gap:14px;font-size:13px">
+        <div class="stack" style="gap:8px">
+          <div><b>1. Kelola Member</b><div class="muted-text">Paket, masa aktif, deposit, sanksi no-show</div></div>
+          <div><b>2. Pesan &amp; Booking Lapangan</b><div class="muted-text">Anti bentrok, tarif peak/off-peak, hold, rutin</div></div>
+        </div>
+        <div class="stack" style="gap:8px">
+          <div><b>3. POS Penjualan</b><div class="muted-text">Air minum, shuttlecock, sewa, jasa; struk thermal</div></div>
+          <div><b>4. Kas Harian</b><div class="muted-text">Per shift, rekonsiliasi otomatis, selisih tercatat</div></div>
+        </div>
+        <div class="stack" style="gap:8px">
+          <div><b>5. Quick PO</b><div class="muted-text">Pengadaan &amp; biaya operasional dengan approval</div></div>
+          <div><b>6. Stock Barang</b><div class="muted-text">Kartu stok, opname, alert minimum, HPP</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="muted-text" style="text-align:center;margin:22px 0 6px">
+    SmashBook v1.0 · Prototipe HTML statis untuk keperluan demonstrasi &amp; persetujuan desain
+  </p>
+
+</div>
+
+</body>
+</html>

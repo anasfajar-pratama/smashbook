@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lapangan &amp; Tarif · SmashBook</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">SB</div><div><div class="name">SmashBook</div><div class="sub">GOR Smash Arena</div></div></div>
+    <nav class="nav">
+      <div class="nav-title">Utama</div>
+      <a href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard</a>
+      <a href="bookings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>Booking Lapangan<span class="tag">3</span></a>
+      <a href="courts.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M12 7v10"/></svg>Lapangan &amp; Tarif</a>
+      <div class="nav-title">Penjualan</div>
+      <a href="pos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12h12L22 7H6"/></svg>POS Kasir</a>
+      <div class="nav-title">Keuangan</div>
+      <a href="cash.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Kas Harian</a>
+      <a href="purchase-orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Quick PO &amp; Biaya<span class="tag">2</span></a>
+      <a href="reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Laporan</a>
+      <div class="nav-title">Persediaan</div>
+      <a href="inventory.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 21V13"/></svg>Stock Barang</a>
+      <div class="nav-title">Master</div>
+      <a href="members.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Member</a>
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Daftar Halaman</a>
+    </nav>
+    <div class="sidebar-foot">v1.0 · Prototipe UI</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <h1>Master Lapangan &amp; Tarif</h1>
+        <div class="crumb">Konfigurasi lapangan, kategori waktu, dan aturan harga</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="shift-pill"><span class="dot"></span> Shift Sore · Kas Rp 1.245.000</div>
+      <button class="btn btn-sm btn-primary" onclick="openModal('modalTarif')">+ Aturan Tarif</button>
+      <div class="user"><div class="avatar">DW</div><div><div class="nm">Dewi Kartika</div><div class="rl">Kasir · Shift Sore</div></div></div>
+    </header>
+
+    <div class="content">
+
+      <!-- Daftar lapangan -->
+      <div class="grid g4">
+        <div class="card">
+          <div class="card-b stack">
+            <div class="row between">
+              <div class="row" style="gap:9px">
+                <span class="ico brand">🏸</span>
+                <div><div class="strong">Lapangan 1</div><div class="muted-text">Karpet Vinyl · Premium</div></div>
+              </div>
+              <span class="badge green">Aktif</span>
+            </div>
+            <div class="divider"></div>
+            <div class="row between"><span class="muted-text">Tarif weekend</span><span class="strong">Rp 110.000</span></div>
+            <div class="row between"><span class="muted-text">Tarif prime</span><span class="strong">Rp 100.000</span></div>
+            <div class="row between"><span class="muted-text">Okupansi 7 hari</span><span class="strong">84%</span></div>
+            <div class="bar"><span style="width:84%"></span></div>
+            <div class="row" style="gap:6px;justify-content:flex-end">
+              <button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button>
+              <button class="btn btn-sm btn-danger">Nonaktifkan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-b stack">
+            <div class="row between">
+              <div class="row" style="gap:9px">
+                <span class="ico brand">🏸</span>
+                <div><div class="strong">Lapangan 2</div><div class="muted-text">Karpet Vinyl · Premium</div></div>
+              </div>
+              <span class="badge green">Aktif</span>
+            </div>
+            <div class="divider"></div>
+            <div class="row between"><span class="muted-text">Tarif weekend</span><span class="strong">Rp 110.000</span></div>
+            <div class="row between"><span class="muted-text">Tarif prime</span><span class="strong">Rp 100.000</span></div>
+            <div class="row between"><span class="muted-text">Okupansi 7 hari</span><span class="strong">71%</span></div>
+            <div class="bar"><span style="width:71%"></span></div>
+            <div class="row" style="gap:6px;justify-content:flex-end">
+              <button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button>
+              <button class="btn btn-sm btn-danger">Nonaktifkan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-b stack">
+            <div class="row between">
+              <div class="row" style="gap:9px">
+                <span class="ico blue">🏸</span>
+                <div><div class="strong">Lapangan 3</div><div class="muted-text">Semen · Standar</div></div>
+              </div>
+              <span class="badge green">Aktif</span>
+            </div>
+            <div class="divider"></div>
+            <div class="row between"><span class="muted-text">Tarif weekend</span><span class="strong">Rp 90.000</span></div>
+            <div class="row between"><span class="muted-text">Tarif prime</span><span class="strong">Rp 85.000</span></div>
+            <div class="row between"><span class="muted-text">Okupansi 7 hari</span><span class="strong">66%</span></div>
+            <div class="bar"><span style="width:66%"></span></div>
+            <div class="row" style="gap:6px;justify-content:flex-end">
+              <button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button>
+              <button class="btn btn-sm btn-danger">Nonaktifkan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-b stack">
+            <div class="row between">
+              <div class="row" style="gap:9px">
+                <span class="ico blue">🏸</span>
+                <div><div class="strong">Lapangan 4</div><div class="muted-text">Semen · Standar</div></div>
+              </div>
+              <span class="badge amber">Perawatan</span>
+            </div>
+            <div class="divider"></div>
+            <div class="row between"><span class="muted-text">Tarif weekend</span><span class="strong">Rp 90.000</span></div>
+            <div class="row between"><span class="muted-text">Tarif prime</span><span class="strong">Rp 85.000</span></div>
+            <div class="row between"><span class="muted-text">Okupansi 7 hari</span><span class="strong">41%</span></div>
+            <div class="bar"><span class="amber" style="width:41%"></span></div>
+            <div class="row" style="gap:6px;justify-content:flex-end">
+              <button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button>
+              <button class="btn btn-sm">Aktifkan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aturan tarif -->
+      <div class="card">
+        <div class="card-h">
+          <div>
+            <h3>Aturan tarif (peak / off-peak)</h3>
+            <div class="sub">Harga dihitung per slot jam sesuai kategori. Booking yang melewati batas kategori dihitung per jam.</div>
+          </div>
+          <div class="right">
+            <select class="select" style="width:180px">
+              <option>Semua lapangan</option>
+              <option>Lapangan 1</option>
+              <option>Lapangan 2</option>
+              <option>Lapangan 3</option>
+              <option>Lapangan 4</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>Lapangan</th><th>Kategori</th><th>Hari</th><th>Jam</th>
+                <th class="num">Tarif/jam</th><th class="num">Diskon member</th><th>Status</th><th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="strong">Lapangan 1 &amp; 2</td>
+                <td><span class="badge grey">Off-Peak</span></td>
+                <td>Senin–Jumat</td><td class="nowrap">07:00–16:00</td>
+                <td class="num strong">Rp 60.000</td><td class="num">10%</td>
+                <td><span class="badge green">Aktif</span></td>
+                <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button></div></td>
+              </tr>
+              <tr>
+                <td class="strong">Lapangan 1 &amp; 2</td>
+                <td><span class="badge red">Prime</span></td>
+                <td>Senin–Jumat</td><td class="nowrap">16:00–22:00</td>
+                <td class="num strong">Rp 100.000</td><td class="num">10%</td>
+                <td><span class="badge green">Aktif</span></td>
+                <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button></div></td>
+              </tr>
+              <tr>
+                <td class="strong">Lapangan 1 &amp; 2</td>
+                <td><span class="badge violet">Night</span></td>
+                <td>Senin–Jumat</td><td class="nowrap">22:00–24:00</td>
+                <td class="num strong">Rp 75.000</td><td class="num">10%</td>
+                <td><span class="badge green">Aktif</span></td>
+                <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button></div></td>
+              </tr>
+              <tr>
+                <td class="strong">Lapangan 1 &amp; 2</td>
+                <td><span class="badge blue">Weekend</span></td>
+                <td>Sabtu, Minggu, hari libur</td><td class="nowrap">07:00–24:00</td>
+                <td class="num strong">Rp 110.000</td><td class="num">10%</td>
+                <td><span class="badge green">Aktif</span></td>
+                <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button></div></td>
+              </tr>
+              <tr>
+                <td class="strong">Lapangan 3 &amp; 4</td>
+                <td><span class="badge grey">Off-Peak</span></td>
+                <td>Senin–Jumat</td><td class="nowrap">07:00–16:00</td>
+                <td class="num strong">Rp 50.000</td><td class="num">10%</td>
+                <td><span class="badge green">Aktif</span></td>
+                <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button></div></td>
+              </tr>
+              <tr>
+                <td class="strong">Lapangan 3 &amp; 4</td>
+                <td><span class="badge red">Prime</span></td>
+                <td>Senin–Jumat</td><td class="nowrap">16:00–22:00</td>
+                <td class="num strong">Rp 85.000</td><td class="num">10%</td>
+                <td><span class="badge green">Aktif</span></td>
+                <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button></div></td>
+              </tr>
+              <tr>
+                <td class="strong">Lapangan 3 &amp; 4</td>
+                <td><span class="badge blue">Weekend</span></td>
+                <td>Sabtu, Minggu, hari libur</td><td class="nowrap">07:00–24:00</td>
+                <td class="num strong">Rp 90.000</td><td class="num">10%</td>
+                <td><span class="badge green">Aktif</span></td>
+                <td><div class="tbl-actions"><button class="btn btn-sm" onclick="openModal('modalTarif')">Ubah</button></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid g2">
+        <div class="card">
+          <div class="card-h"><h3>Promo &amp; penyesuaian harga</h3></div>
+          <div class="card-b tight">
+            <div class="list-item">
+              <div class="ic ico amber">🌤️</div>
+              <div class="t"><b>Promo Jam Sepi</b><small>Diskon 30% · Senin–Jumat 11:00–15:00</small></div>
+              <span class="badge green">Aktif</span>
+            </div>
+            <div class="list-item">
+              <div class="ic ico violet">👥</div>
+              <div class="t"><b>Tarif Komunitas</b><small>Rp 80.000/jam · minimal 2 lapangan · booking rutin</small></div>
+              <span class="badge green">Aktif</span>
+            </div>
+            <div class="list-item">
+              <div class="ic ico blue">🎓</div>
+              <div class="t"><b>Tarif Pelajar</b><small>Diskon 20% · hari kerja sebelum 15:00 · tunjukkan kartu pelajar</small></div>
+              <span class="badge amber">Dijadwalkan</span>
+            </div>
+            <div class="list-item">
+              <div class="ic ico red">🌙</div>
+              <div class="t"><b>Surcharge Jam Malam</b><small>+ Rp 10.000/jam setelah 22:00 (biaya listrik)</small></div>
+              <span class="badge grey">Nonaktif</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><h3>Hari libur nasional</h3><div class="right"><button class="btn btn-sm">+ Tambah</button></div></div>
+          <div class="card-b tight">
+            <div class="list-item"><div class="ic ico blue">📅</div><div class="t"><b>25 Desember 2026</b><small>Hari Raya Natal · tarif weekend</small></div></div>
+            <div class="list-item"><div class="ic ico blue">📅</div><div class="t"><b>1 Januari 2027</b><small>Tahun Baru · tarif weekend</small></div></div>
+            <div class="list-item"><div class="ic ico blue">📅</div><div class="t"><b>19 Maret 2027</b><small>Nyepi · GOR tutup (jam operasional 0)</small></div></div>
+            <div class="card-b">
+              <div class="alert info">
+                <span class="ic">ℹ️</span>
+                <div><b>Dampak tarif</b>Tanggal pada daftar ini otomatis memakai kategori <em>Weekend</em>, bukan tarif hari kerja.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jam operasional -->
+      <div class="card">
+        <div class="card-h"><h3>Jam operasional</h3></div>
+        <div class="card-b">
+          <div class="grid g4" style="gap:14px">
+            <div class="field"><label>Buka</label><input class="input" value="07:00"></div>
+            <div class="field"><label>Tutup</label><input class="input" value="24:00"></div>
+            <div class="field"><label>Granularitas slot</label><select class="select"><option>Per 30 menit</option><option selected>Per 60 menit</option></select></div>
+            <div class="field"><label>Toleransi check-out</label><input class="input" value="10 menit"></div>
+          </div>
+          <div class="row" style="justify-content:flex-end;margin-top:14px"><button class="btn btn-primary">Simpan pengaturan</button></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODAL TARIF -->
+<div class="modal-mask" id="modalTarif">
+  <div class="modal">
+    <div class="modal-h">
+      <div><h3>Aturan Tarif</h3><div class="sub">Berlaku untuk lapangan &amp; rentang waktu tertentu</div></div>
+      <button class="x" onclick="closeModal('modalTarif')">✕</button>
+    </div>
+    <div class="modal-b">
+      <div class="form-grid">
+        <div class="field full">
+          <label>Lapangan</label>
+          <div class="row wrap" style="gap:6px">
+            <span class="chip on">Lapangan 1</span>
+            <span class="chip on">Lapangan 2</span>
+            <span class="chip">Lapangan 3</span>
+            <span class="chip">Lapangan 4</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Kategori</label>
+          <select class="select">
+            <option>Off-Peak</option><option selected>Prime</option>
+            <option>Night</option><option>Weekend / Libur</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Hari berlaku</label>
+          <select class="select"><option selected>Senin–Jumat</option><option>Sabtu–Minggu</option><option>Semua hari</option></select>
+        </div>
+        <div class="field"><label>Jam mulai</label><input class="input" value="16:00"></div>
+        <div class="field"><label>Jam selesai</label><input class="input" value="22:00"></div>
+        <div class="field">
+          <label>Tarif per jam</label>
+          <div class="money-input"><span class="rp">Rp</span><input class="input" value="100.000"></div>
+        </div>
+        <div class="field"><label>Diskon member (%)</label><input class="input" value="10"></div>
+        <div class="field full">
+          <label>Catatan internal</label>
+          <input class="input" placeholder="Contoh: disesuaikan Jan 2027 karena kenaikan listrik">
+        </div>
+      </div>
+    </div>
+    <div class="modal-f">
+      <button class="btn" onclick="closeModal('modalTarif')">Batal</button>
+      <button class="btn btn-primary" onclick="closeModal('modalTarif')">Simpan aturan</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

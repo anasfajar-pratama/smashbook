@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick PO &amp; Biaya · SmashBook</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">SB</div><div><div class="name">SmashBook</div><div class="sub">GOR Smash Arena</div></div></div>
+    <nav class="nav">
+      <div class="nav-title">Utama</div>
+      <a href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard</a>
+      <a href="bookings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>Booking Lapangan<span class="tag">3</span></a>
+      <a href="courts.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M12 7v10"/></svg>Lapangan &amp; Tarif</a>
+      <div class="nav-title">Penjualan</div>
+      <a href="pos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12h12L22 7H6"/></svg>POS Kasir</a>
+      <div class="nav-title">Keuangan</div>
+      <a href="cash.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Kas Harian</a>
+      <a href="purchase-orders.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Quick PO &amp; Biaya<span class="tag">2</span></a>
+      <a href="reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Laporan</a>
+      <div class="nav-title">Persediaan</div>
+      <a href="inventory.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 21V13"/></svg>Stock Barang</a>
+      <div class="nav-title">Master</div>
+      <a href="members.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Member</a>
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Daftar Halaman</a>
+    </nav>
+    <div class="sidebar-foot">v1.0 · Prototipe UI · Admin</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div><h1>Quick PO &amp; Biaya Operasional</h1><div class="crumb">Pengadaan cepat dengan jejak audit · 18 Oktober 2026</div></div>
+      <div class="spacer"></div>
+      <button class="btn btn-sm">Supplier</button>
+      <button class="btn btn-sm btn-primary">+ PO Lengkap</button>
+      <div class="user"><div class="avatar" style="background:linear-gradient(140deg,#3b82f6,#60a5fa)">AD</div><div><div class="nm">Admin GOR</div><div class="rl">Admin Operasional</div></div></div>
+    </header>
+
+    <div class="content">
+
+      <div class="grid g4">
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Menunggu approval</span><span class="ico amber">⏳</span></div>
+          <div class="val">2</div>
+          <div class="dlt neutral">Total Rp 1.625.000</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">PO dalam pengiriman</span><span class="ico blue">🚚</span></div>
+          <div class="val">3</div>
+          <div class="dlt neutral">Estimasi datang 20 Okt</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Pembelian bulan ini</span><span class="ico violet">🛒</span></div>
+          <div class="val">Rp 8.470.000</div>
+          <div class="dlt up">12 PO · 8 supplier</div>
+        </div>
+        <div class="card kpi">
+          <div class="row between"><span class="lbl">Biaya operasional bulan ini</span><span class="ico red">📉</span></div>
+          <div class="val">Rp 14.200.000</div>
+          <div class="dlt neutral">Terbesar: listrik Rp 4,8 jt</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="tabs" data-tabs="po">
+          <button data-tab="quick" class="on">⚡ Quick PO</button>
+          <button data-tab="daftar">Daftar Purchase Order</button>
+          <button data-tab="opex">Biaya Operasional</button>
+          <button data-tab="supplier">Supplier</button>
+          <button data-tab="template">Template &amp; Item Favorit</button>
+        </div>
+
+        <!-- ===== QUICK PO ===== -->
+        <div data-panel="po/quick">
+          <div class="card-b grid g-3-2" style="gap:18px">
+
+            <div class="stack" style="gap:14px">
+              <div class="alert info">
+                <span class="ic">⚡</span>
+                <div><b>Quick PO dalam 3 langkah</b>Pilih supplier/asal belanja → tambahkan item → simpan &amp; ajukan. Cocok untuk pembelian mendadak seperti air minum atau shuttlecock.</div>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label>Supplier / asal belanja</label>
+                  <select class="select">
+                    <option>Warung Bu Tini (non-supplier)</option>
+                    <option>UD Sumber Rejeki</option>
+                    <option>PT Sport Sarana</option>
+                    <option>CV Terang Elektrik</option>
+                    <option>PDAM / PLN</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Jenis PO</label>
+                  <select class="select">
+                    <option>Produk (masuk stok)</option>
+                    <option>Biaya / Jasa (langsung expense)</option>
+                    <option>Campuran (produk + jasa)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Tanggal dibutuhkan</label>
+                  <input class="input" type="date" value="2026-10-18">
+                </div>
+                <div class="field">
+                  <label>Cara bayar</label>
+                  <select class="select"><option>Tunai (kas shift)</option><option>Transfer</option><option>Tempo 14 hari</option></select>
+                </div>
+                <div class="field">
+                  <label>Prioritas</label>
+                  <select class="select"><option>Normal</option><option>Darurat (stok habis)</option></select>
+                </div>
+                <div class="field">
+                  <label>Disetujui oleh</label>
+                  <div class="row" style="gap:8px;padding-top:2px">
+                    <span class="badge amber" id="poApproval">Auto-approve Admin</span>
+                  </div>
+                  <span class="hint">PO &gt; Rp 500.000 wajib approval Owner</span>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="row between">
+                <h4>Item</h4>
+                <div class="row" style="gap:6px">
+                  <button class="btn btn-sm">+ Baris kosong</button>
+                  <button class="btn btn-sm btn-primary">+ Dari item favorit</button>
+                </div>
+              </div>
+
+              <div class="table-wrap" style="border:1px solid var(--line);border-radius:12px">
+                <table class="tbl">
+                  <thead>
+                    <tr><th>Deskripsi</th><th class="num">Qty</th><th class="num">Harga satuan</th><th class="num">Jumlah</th><th></th></tr>
+                  </thead>
+                  <tbody>
+                    <tr data-po-qty="74400">
+                      <td>
+                        <div class="strong">Air Mineral 600ml — 1 dus (24 botol)</div>
+                        <select class="select" style="max-width:220px;margin-top:5px;font-size:12px">
+                          <option>Produk → masuk stok (MNM-001)</option>
+                          <option>Biaya operasional</option>
+                        </select>
+                      </td>
+                      <td class="num"><input class="input" data-qty oninput="hitungPO()" style="width:78px;text-align:right" value="5"></td>
+                      <td class="num">Rp 74.400</td>
+                      <td class="num strong" data-amount>Rp 372.000</td>
+                      <td><button class="btn btn-sm btn-ghost">✕</button></td>
+                    </tr>
+                    <tr data-po-qty="36000">
+                      <td>
+                        <div class="strong">Shuttlecock Lokal — 1 pack (3 pcs)</div>
+                        <select class="select" style="max-width:220px;margin-top:5px;font-size:12px">
+                          <option>Produk → masuk stok (SHC-004)</option>
+                          <option>Biaya operasional</option>
+                        </select>
+                      </td>
+                      <td class="num"><input class="input" data-qty oninput="hitungPO()" style="width:78px;text-align:right" value="10"></td>
+                      <td class="num">Rp 36.000</td>
+                      <td class="num strong" data-amount>Rp 360.000</td>
+                      <td><button class="btn btn-sm btn-ghost">✕</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="row" style="gap:8px">
+                <button class="btn">Tambah dari riwayat pembelian</button>
+                <button class="btn">Simpan sebagai template</button>
+              </div>
+
+              <div class="field">
+                <label>Catatan / alasan pengadaan</label>
+                <textarea class="input" rows="2" placeholder="Contoh: stok air minum di bawah minimum, kebutuhan akhir pekan naik 40%."></textarea>
+              </div>
+            </div>
+
+            <!-- Sisi kanan: ringkasan & kontrol anti-fraud -->
+            <div class="stack">
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Ringkasan PO</h3></div>
+                <div class="card-b stack" style="gap:8px">
+                  <div class="sum"><span class="lbl">Subtotal</span><span id="poSubtotal">Rp 732.000</span></div>
+                  <div class="sum"><span class="lbl">Diskon supplier</span><span>Rp 0</span></div>
+                  <div class="sum"><span class="lbl">Pajak (non-PKP)</span><span>Rp 0</span></div>
+                  <div class="sum"><span class="lbl">Biaya kirim</span><span>Rp 0</span></div>
+                  <div class="sum big"><span>Total</span><span id="poTotal">Rp 732.000</span></div>
+                </div>
+              </div>
+
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Kontrol &amp; kepatuhan</h3></div>
+                <div class="card-b stack" style="gap:11px">
+                  <div class="list-item" style="padding:0">
+                    <div class="ic ico amber">📎</div>
+                    <div class="t"><b>Foto nota wajib</b><small>Untuk pembelian tunai &lt; Rp 500.000</small></div>
+                    <span class="badge amber">Belum</span>
+                  </div>
+                  <div class="list-item" style="padding:0">
+                    <div class="ic ico blue">🏪</div>
+                    <div class="t"><b>Perbandingan harga</b><small>Harga terakhir dari supplier sama: Rp 72.000/dus</small></div>
+                    <span class="badge red">+3,3%</span>
+                  </div>
+                  <div class="list-item" style="padding:0">
+                    <div class="ic ico brand">✅</div>
+                    <div class="t"><b>Anggaran kategori</b><small>Minuman: terpakai 62% dari budget bulan</small></div>
+                    <span class="badge green">Aman</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Setelah disimpan</h3></div>
+                <div class="card-b" style="font-size:13px;color:#334155">
+                  <div class="stack" style="gap:8px">
+                    <div>1. Jika ≤ Rp 500.000 → langsung <b>disetujui Admin</b>.</div>
+                    <div>2. Jika &gt; Rp 500.000 → status <b>menunggu Owner</b>.</div>
+                    <div>3. Saat barang datang → <b>penerimaan</b>: stok naik otomatis &amp; HPP diperbarui.</div>
+                    <div>4. Item bertipe biaya → langsung menjadi <b>pengeluaran</b> dan mengurangi kas (bila tunai).</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stack" style="gap:8px">
+                <button class="btn btn-primary btn-lg btn-block">Simpan &amp; Ajukan PO</button>
+                <button class="btn btn-block">Simpan Draf</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== DAFTAR PO ===== -->
+        <div data-panel="po/daftar" style="display:none">
+          <div class="card-b row wrap" style="gap:10px;border-bottom:1px solid var(--line)">
+            <div class="search" style="flex:1;min-width:220px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input class="input" placeholder="Cari nomor PO atau supplier...">
+            </div>
+            <div class="row wrap" style="gap:6px">
+              <span class="chip on">Semua</span><span class="chip">Menunggu approval</span>
+              <span class="chip">Dalam pengiriman</span><span class="chip">Diterima</span>
+            </div>
+            <button class="btn">Ekspor</button>
+          </div>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr><th>Kode PO</th><th>Supplier</th><th>Jenis</th><th>Tanggal</th><th>Dibutuhkan</th>
+                <th class="num">Total</th><th>Pengaju</th><th>Approver</th><th>Status</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono">PO-20261018-014</td><td class="strong">Warung Bu Tini</td>
+                  <td><span class="badge blue">Produk</span></td><td class="nowrap">18 Okt 2026</td><td class="nowrap">18 Okt 2026</td>
+                  <td class="num strong">Rp 372.000</td><td>Admin</td><td class="muted">Auto-approve</td>
+                  <td><span class="badge amber">Menunggu nota</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Terima</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">PO-20261018-012</td><td class="strong">CV Terang Elektrik</td>
+                  <td><span class="badge amber">Biaya/Jasa</span></td><td class="nowrap">18 Okt 2026</td><td class="nowrap">20 Okt 2026</td>
+                  <td class="num strong">Rp 1.250.000</td><td>Admin</td><td class="muted">—</td>
+                  <td><span class="badge red">Menunggu Owner</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm btn-primary" onclick="openModal('modalApproval')">Tinjau</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">PO-20261017-011</td><td class="strong">UD Sumber Rejeki</td>
+                  <td><span class="badge blue">Produk</span></td><td class="nowrap">17 Okt 2026</td><td class="nowrap">18 Okt 2026</td>
+                  <td class="num strong">Rp 912.000</td><td>Admin</td><td>Owner</td>
+                  <td><span class="badge green">Diterima sebagian</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Terima Sisa</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">PO-20261016-010</td><td class="strong">PT Sport Sarana</td>
+                  <td><span class="badge blue">Produk</span></td><td class="nowrap">16 Okt 2026</td><td class="nowrap">22 Okt 2026</td>
+                  <td class="num strong">Rp 4.500.000</td><td>Admin</td><td>Owner</td>
+                  <td><span class="badge blue">Dalam pengiriman</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Detail</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">PO-20261015-009</td><td class="strong">UD Sumber Rejeki</td>
+                  <td><span class="badge blue">Produk</span></td><td class="nowrap">15 Okt 2026</td><td class="nowrap">16 Okt 2026</td>
+                  <td class="num strong">Rp 240.000</td><td>Admin</td><td class="muted">Auto-approve</td>
+                  <td><span class="badge green">Selesai</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Detail</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">PO-20261013-007</td><td class="strong">PT Sport Sarana</td>
+                  <td><span class="badge blue">Produk</span></td><td class="nowrap">13 Okt 2026</td><td class="nowrap">14 Okt 2026</td>
+                  <td class="num strong">Rp 140.000</td><td>Admin</td><td class="muted">Auto-approve</td>
+                  <td><span class="badge green">Selesai</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Detail</button></div></td>
+                </tr>
+                <tr>
+                  <td class="mono">PO-20261010-005</td><td class="strong">PLN</td>
+                  <td><span class="badge amber">Biaya/Jasa</span></td><td class="nowrap">10 Okt 2026</td><td class="nowrap">10 Okt 2026</td>
+                  <td class="num strong">Rp 4.800.000</td><td>Admin</td><td>Owner</td>
+                  <td><span class="badge grey">Dibatalkan</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Detail</button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===== OPEX ===== -->
+        <div data-panel="po/opex" style="display:none">
+          <div class="card-b grid g-2-1" style="gap:18px">
+            <div class="stack">
+              <div class="row between">
+                <h4>Biaya operasional bulan ini</h4>
+                <div class="row" style="gap:8px">
+                  <select class="select" style="width:150px"><option>Oktober 2026</option><option>September 2026</option></select>
+                  <button class="btn btn-sm btn-primary">+ Catat Biaya</button>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="tbl">
+                  <thead><tr><th>Tanggal</th><th>Kategori</th><th>Keterangan</th><th class="num">Nominal</th><th>Bayar</th><th>Nota</th><th>Petugas</th></tr></thead>
+                  <tbody>
+                    <tr><td class="nowrap">10 Okt</td><td><span class="badge red">Listrik</span></td><td>Tagihan PLN lapangan &amp; kantor</td><td class="num strong">Rp 4.800.000</td><td>Transfer</td><td><span class="badge green">Ada</span></td><td>Admin</td></tr>
+                    <tr><td class="nowrap">5 Okt</td><td><span class="badge blue">Gaji</span></td><td>Gaji 4 staff kebersihan</td><td class="num strong">Rp 4.400.000</td><td>Transfer</td><td><span class="badge green">Ada</span></td><td>Owner</td></tr>
+                    <tr><td class="nowrap">3 Okt</td><td><span class="badge violet">Sewa</span></td><td>Sewa lahan &amp; bangunan</td><td class="num strong">Rp 3.500.000</td><td>Transfer</td><td><span class="badge green">Ada</span></td><td>Owner</td></tr>
+                    <tr><td class="nowrap">18 Okt</td><td><span class="badge grey">Kas kecil</span></td><td>Gas + air galon dapur</td><td class="num strong">Rp 85.000</td><td><span class="badge grey">Tunai</span></td><td><span class="badge green">Ada</span></td><td>Dewi</td></tr>
+                    <tr><td class="nowrap">16 Okt</td><td><span class="badge amber">Perawatan</span></td><td>Ganti net 2 lapangan</td><td class="num strong">Rp 640.000</td><td><span class="badge grey">Tunai</span></td><td><span class="badge green">Ada</span></td><td>Admin</td></tr>
+                    <tr><td class="nowrap">14 Okt</td><td><span class="badge cyan">Internet</span></td><td>Internet &amp; CCTV bulanan</td><td class="num strong">Rp 450.000</td><td>Transfer</td><td><span class="badge green">Ada</span></td><td>Admin</td></tr>
+                    <tr><td class="nowrap">12 Okt</td><td><span class="badge blue">Kebersihan</span></td><td>Sabun, tisu, pewangi ruang ganti</td><td class="num strong">Rp 325.000</td><td><span class="badge grey">Tunai</span></td><td><span class="badge red">Belum</span></td><td>Rudi</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="alert err">
+                <span class="ic">⚠️</span>
+                <div><b>1 pengeluaran tanpa nota</b>Pengeluaran 12 Okt (Rp 325.000) belum dilampiri nota. Nota wajib diunggah untuk pembelian tunai di bawah Rp 500.000.</div>
+              </div>
+            </div>
+
+            <div class="stack">
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Komposisi biaya</h3><div class="right"><span class="badge dark">Rp 14.200.000</span></div></div>
+                <div class="card-b stack" style="gap:12px">
+                  <div>
+                    <div class="row between"><span class="muted-text">Listrik</span><span class="strong">Rp 4.800.000</span></div>
+                    <div class="bar" style="margin-top:5px"><span class="red" style="width:34%"></span></div>
+                  </div>
+                  <div>
+                    <div class="row between"><span class="muted-text">Gaji &amp; upah</span><span class="strong">Rp 4.400.000</span></div>
+                    <div class="bar" style="margin-top:5px"><span class="blue" style="width:31%"></span></div>
+                  </div>
+                  <div>
+                    <div class="row between"><span class="muted-text">Sewa</span><span class="strong">Rp 3.500.000</span></div>
+                    <div class="bar" style="margin-top:5px"><span class="amber" style="width:25%"></span></div>
+                  </div>
+                  <div>
+                    <div class="row between"><span class="muted-text">Perawatan</span><span class="strong">Rp 640.000</span></div>
+                    <div class="bar" style="margin-top:5px"><span class="violet" style="width:5%"></span></div>
+                  </div>
+                  <div>
+                    <div class="row between"><span class="muted-text">Lain-lain</span><span class="strong">Rp 860.000</span></div>
+                    <div class="bar" style="margin-top:5px"><span style="width:5%"></span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Biaya rutin otomatis</h3></div>
+                <div class="card-b tight">
+                  <div class="list-item"><div class="ic ico violet">🔁</div><div class="t"><b>Sewa lahan</b><small>Rp 3.500.000 · setiap tanggal 1</small></div><span class="badge green">Aktif</span></div>
+                  <div class="list-item"><div class="ic ico blue">🔁</div><div class="t"><b>Internet &amp; CCTV</b><small>Rp 450.000 · setiap tanggal 14</small></div><span class="badge green">Aktif</span></div>
+                  <div class="list-item"><div class="ic ico blue">🔁</div><div class="t"><b>Gaji staff kebersihan</b><small>Rp 4.400.000 · setiap tanggal 5</small></div><span class="badge green">Aktif</span></div>
+                  <div class="list-item"><div class="ic ico amber">🔁</div><div class="t"><b>Listrik (estimasi)</b><small>Rp 4.700.000 · tagihan aktual dikonfirmasi manual</small></div><span class="badge amber">Perlu konfirmasi</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SUPPLIER ===== -->
+        <div data-panel="po/supplier" style="display:none">
+          <div class="card-b row between" style="border-bottom:1px solid var(--line)">
+            <div class="muted-text">8 supplier aktif</div>
+            <button class="btn btn-sm btn-primary">+ Supplier Baru</button>
+          </div>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Supplier</th><th>Kontak</th><th>Kategori</th><th>Termin</th><th class="num">PO 3 bulan</th><th class="num">Nilai</th><th>Rating harga</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><div class="strong">UD Sumber Rejeki</div><div class="muted">Bandung</div></td>
+                  <td><div>Bu Yanti</div><div class="muted">0812-2233-4455</div></td>
+                  <td><span class="badge blue">Minuman</span></td><td>COD / tempo 7 hari</td>
+                  <td class="num">9</td><td class="num strong">Rp 3.240.000</td>
+                  <td><span class="badge green">Termurah</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Riwayat</button><button class="btn btn-sm btn-primary">Buat PO</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">PT Sport Sarana</div><div class="muted">Jakarta</div></td>
+                  <td><div>Pak Ridwan</div><div class="muted">021-7788-9900</div></td>
+                  <td><span class="badge violet">Shuttlecock &amp; raket</span></td><td>Tempo 14 hari</td>
+                  <td class="num">4</td><td class="num strong">Rp 9.800.000</td>
+                  <td><span class="badge amber">Sedang</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Riwayat</button><button class="btn btn-sm btn-primary">Buat PO</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">CV Terang Elektrik</div><div class="muted">Bandung</div></td>
+                  <td><div>Pak Hendra</div><div class="muted">0821-4455-7788</div></td>
+                  <td><span class="badge amber">Peralatan &amp; jasa</span></td><td>Tempo 14 hari</td>
+                  <td class="num">2</td><td class="num strong">Rp 2.180.000</td>
+                  <td><span class="badge grey">—</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Riwayat</button><button class="btn btn-sm btn-primary">Buat PO</button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="strong">Warung Bu Tini</div><div class="muted">Depan GOR</div></td>
+                  <td><div>Bu Tini</div><div class="muted">0857-1122-3344</div></td>
+                  <td><span class="badge blue">Minuman</span></td><td>Tunai</td>
+                  <td class="num">12</td><td class="num strong">Rp 1.740.000</td>
+                  <td><span class="badge amber">Sedang</span></td>
+                  <td><div class="tbl-actions"><button class="btn btn-sm">Riwayat</button><button class="btn btn-sm btn-primary">Buat PO</button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===== TEMPLATE ===== -->
+        <div data-panel="po/template" style="display:none">
+          <div class="card-b">
+            <div class="alert info" style="margin-bottom:14px">
+              <span class="ic">ℹ️</span>
+              <div><b>Template mempercepat Quick PO</b>Pilih template → item langsung terisi dengan qty &amp; harga terakhir, lalu sesuaikan bila harga berubah.</div>
+            </div>
+            <div class="grid g3">
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Belanja Bulanan Air Minum</h3></div>
+                <div class="card-b stack" style="gap:8px;font-size:13px">
+                  <div>Air Mineral 600ml — 10 dus</div>
+                  <div>Isotonik 500ml — 4 dus</div>
+                  <div>Teh Kotak 300ml — 3 dus</div>
+                  <div class="divider"></div>
+                  <div class="row between"><span class="muted-text">Estimasi</span><span class="strong">Rp 1.150.000</span></div>
+                  <button class="btn btn-primary btn-block">Gunakan template</button>
+                </div>
+              </div>
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Belanja Bulanan Shuttlecock</h3></div>
+                <div class="card-b stack" style="gap:8px;font-size:13px">
+                  <div>Yonex AS-30 — 12 tube</div>
+                  <div>Shuttlecock Lokal — 20 pack</div>
+                  <div class="divider"></div>
+                  <div class="row between"><span class="muted-text">Estimasi</span><span class="strong">Rp 1.104.000</span></div>
+                  <button class="btn btn-primary btn-block">Gunakan template</button>
+                </div>
+              </div>
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Kebutuhan Kebersihan</h3></div>
+                <div class="card-b stack" style="gap:8px;font-size:13px">
+                  <div>Sabun cuci tangan — 4 botol</div>
+                  <div>Tisu ruang ganti — 6 pack</div>
+                  <div>Pewangi ruangan — 2 botol</div>
+                  <div class="divider"></div>
+                  <div class="row between"><span class="muted-text">Estimasi</span><span class="strong">Rp 325.000</span></div>
+                  <button class="btn btn-primary btn-block">Gunakan template</button>
+                </div>
+              </div>
+              <div class="card" style="box-shadow:none">
+                <div class="card-h"><h3>Jas Hujan &amp; Bola Lampu</h3></div>
+                <div class="card-b stack" style="gap:8px;font-size:13px">
+                  <div>Lampu LED sorot 200W — 2 unit</div>
+                  <div>Kabel &amp; fitting — 1 set</div>
+                  <div class="divider"></div>
+                  <div class="row between"><span class="muted-text">Estimasi</span><span class="strong">Rp 900.000</span></div>
+                  <button class="btn btn-primary btn-block">Gunakan template</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: APPROVAL ============ -->
+<div class="modal-mask" id="modalApproval">
+  <div class="modal">
+    <div class="modal-h">
+      <div><h3>Tinjau Purchase Order</h3><div class="sub">PO-20261018-012 · pengaju: Admin · 18 Okt 2026</div></div>
+      <button class="x" onclick="closeModal('modalApproval')">✕</button>
+    </div>
+    <div class="modal-b stack">
+      <div class="alert warn">
+        <span class="ic">⚠️</span>
+        <div><b>Melebihi threshold Admin (Rp 500.000)</b>PO ini perlu persetujuan Owner sebelum barang dipesan.</div>
+      </div>
+      <div class="grid g2" style="gap:12px">
+        <div><div class="muted-text">Supplier</div><div class="strong">CV Terang Elektrik</div></div>
+        <div><div class="muted-text">Jenis</div><div class="strong">Biaya / Jasa (tidak masuk stok)</div></div>
+        <div><div class="muted-text">Dibutuhkan</div><div class="strong">20 Okt 2026</div></div>
+        <div><div class="muted-text">Pembayaran</div><div class="strong">Tempo 14 hari</div></div>
+      </div>
+      <div class="table-wrap">
+        <table class="tbl">
+          <thead><tr><th>Deskripsi</th><th class="num">Qty</th><th class="num">Harga</th><th class="num">Jumlah</th></tr></thead>
+          <tbody>
+            <tr><td>Lampu LED sorot 200W (lapangan 3)</td><td class="num">2</td><td class="num">Rp 450.000</td><td class="num strong">Rp 900.000</td></tr>
+            <tr><td>Jasa pemasangan &amp; kabel</td><td class="num">1</td><td class="num">Rp 350.000</td><td class="num strong">Rp 350.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row between">
+        <span class="muted-text">Perbandingan harga 3 bulan terakhir</span>
+        <span class="badge green">Sesuai harga pasar</span>
+      </div>
+      <div class="field"><label>Catatan approval</label><textarea class="input" rows="2" placeholder="Contoh: disetujui karena lampu lapangan 3 sudah redup."></textarea></div>
+    </div>
+    <div class="modal-f">
+      <button class="btn btn-danger" onclick="closeModal('modalApproval')">Tolak</button>
+      <button class="btn" onclick="closeModal('modalApproval')">Minta revisi</button>
+      <button class="btn btn-primary" onclick="closeModal('modalApproval')">Setujui PO</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

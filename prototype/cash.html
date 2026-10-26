@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kas Harian · SmashBook</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">SB</div><div><div class="name">SmashBook</div><div class="sub">GOR Smash Arena</div></div></div>
+    <nav class="nav">
+      <div class="nav-title">Utama</div>
+      <a href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard</a>
+      <a href="bookings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>Booking Lapangan<span class="tag">3</span></a>
+      <a href="courts.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M12 7v10"/></svg>Lapangan &amp; Tarif</a>
+      <div class="nav-title">Penjualan</div>
+      <a href="pos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12h12L22 7H6"/></svg>POS Kasir</a>
+      <div class="nav-title">Keuangan</div>
+      <a href="cash.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Kas Harian</a>
+      <a href="purchase-orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Quick PO &amp; Biaya<span class="tag">2</span></a>
+      <a href="reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Laporan</a>
+      <div class="nav-title">Persediaan</div>
+      <a href="inventory.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 21V13"/></svg>Stock Barang</a>
+      <div class="nav-title">Master</div>
+      <a href="members.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Member</a>
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Daftar Halaman</a>
+    </nav>
+    <div class="sidebar-foot">v1.0 · Prototipe UI</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div><h1>Kas Harian</h1><div class="crumb">Sesi kas per shift · Minggu, 18 Oktober 2026</div></div>
+      <div class="spacer"></div>
+      <div class="shift-pill"><span class="dot"></span> Sesi OPEN · Shift Sore · 15:02</div>
+      <button class="btn btn-sm btn-danger" onclick="openModal('modalTutup')">Tutup Shift</button>
+      <div class="user"><div class="avatar">DW</div><div><div class="nm">Dewi Kartika</div><div class="rl">Kasir · Shift Sore</div></div></div>
+    </header>
+
+    <div class="content">
+
+      <!-- Rekonsiliasi -->
+      <div class="card">
+        <div class="card-h">
+          <div>
+            <h3>Sesi kas aktif — KAS-20261018-SORE</h3>
+            <div class="sub">Dibuka oleh Dewi Kartika · 18 Okt 2026 15:02 · belum ditutup</div>
+          </div>
+          <div class="right"><span class="badge green">OPEN</span></div>
+        </div>
+        <div class="card-b">
+          <div class="recon">
+            <div>
+              <div class="l">Modal awal</div>
+              <div class="v">Rp 300.000</div>
+            </div>
+            <div>
+              <div class="l">Tunai masuk</div>
+              <div class="v" style="color:#047857">+ Rp 1.480.000</div>
+            </div>
+            <div>
+              <div class="l">Tunai keluar</div>
+              <div class="v" style="color:#b91c1c">− Rp 235.000</div>
+            </div>
+          </div>
+
+          <div class="grid g2" style="margin-top:16px;gap:16px">
+            <div class="stack">
+              <div class="money-row">
+                <div class="ic ico brand">💵</div>
+                <div class="t"><b>Saldo tunai seharusnya</b><small>Modal awal + tunai masuk − tunai keluar (yang harus ada di kotak kas)</small></div>
+                <div class="v" id="expectedVal" data-val="1545000">Rp 1.545.000</div>
+              </div>
+              <div class="money-row">
+                <div class="ic ico blue">📲</div>
+                <div class="t"><b>Non-tunai (QRIS + Debit + Transfer)</b><small>Tidak masuk kas fisik, tetap dicatat untuk rekonsiliasi</small></div>
+                <div class="v">Rp 862.000</div>
+              </div>
+              <div class="money-row">
+                <div class="ic ico violet">🧾</div>
+                <div class="t"><b>Total transaksi shift</b><small>Booking 12× · POS 37× · Top-up deposit 3×</small></div>
+                <div class="v">Rp 2.342.000</div>
+              </div>
+            </div>
+
+            <div class="card" style="box-shadow:none;background:#f8fafc">
+              <div class="card-h"><h3>Hitung fisik kas</h3></div>
+              <div class="card-b stack">
+                <div class="field">
+                  <label>Uang fisik dihitung kasir</label>
+                  <div class="money-input">
+                    <span class="rp">Rp</span>
+                    <input class="input" id="fisikInput" placeholder="0" oninput="hitungSelisih()">
+                  </div>
+                  <span class="hint">Hitung seluruh pecahan di kotak kas, lalu masukkan totalnya.</span>
+                </div>
+
+                <div id="selisihBox" style="display:none">
+                  <div class="row between" style="padding:9px 0;border-top:1px dashed var(--line)">
+                    <span class="lbl muted-text">Selisih</span>
+                    <span class="v" style="font-size:19px;font-weight:750">Rp 0</span>
+                  </div>
+                  <div class="ket muted-text"></div>
+                </div>
+
+                <div class="row" style="gap:8px">
+                  <button class="btn btn-block" onclick="document.getElementById('fisikInput').value='1.545.000';hitungSelisih()">Simulasi: sesuai</button>
+                  <button class="btn btn-block" onclick="document.getElementById('fisikInput').value='1.538.000';hitungSelisih()">Simulasi: kurang 7rb</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mutasi + ringkasan -->
+      <div class="grid g-2-1">
+
+        <div class="card">
+          <div class="card-h">
+            <div><h3>Mutasi kas sesi ini</h3><div class="sub">Semua pergerakan tunai otomatis dari booking, POS, dan pengeluaran</div></div>
+            <div class="right">
+              <div class="row wrap" style="gap:6px">
+                <span class="chip on">Semua</span><span class="chip">Masuk</span><span class="chip">Keluar</span>
+              </div>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr><th>Waktu</th><th>Keterangan</th><th>Kategori</th><th>Referensi</th><th class="num">Masuk</th><th class="num">Keluar</th><th class="num">Saldo</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="nowrap">15:02</td><td class="strong">Modal awal shift</td><td><span class="badge grey">Modal</span></td>
+                  <td class="mono">KAS-20261018-SORE</td>
+                  <td class="num v in">300.000</td><td class="num">—</td><td class="num strong">300.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">15:10</td><td class="strong">Booking Lapangan 3 · 2 jam</td><td><span class="badge blue">Sewa lapangan</span></td>
+                  <td class="mono">BK-20261018-0035</td>
+                  <td class="num v in">180.000</td><td class="num">—</td><td class="num strong">480.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">15:22</td><td class="strong">Penjualan POS (tunai)</td><td><span class="badge violet">POS</span></td>
+                  <td class="mono">TRX-20261018-0033</td>
+                  <td class="num v in">22.000</td><td class="num">—</td><td class="num strong">502.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">15:40</td><td class="strong">Beli gas + air galon dapur</td><td><span class="badge amber">Kas kecil</span></td>
+                  <td class="mono">EXP-20261018-0009</td>
+                  <td class="num">—</td><td class="num v out">85.000</td><td class="num strong">417.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">15:51</td><td class="strong">Penjualan POS (tunai)</td><td><span class="badge violet">POS</span></td>
+                  <td class="mono">TRX-20261018-0035</td>
+                  <td class="num v in">32.000</td><td class="num">—</td><td class="num strong">449.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">16:04</td><td class="strong">Top-up deposit member</td><td><span class="badge green">Deposit</span></td>
+                  <td class="mono">DEP-20261018-0011</td>
+                  <td class="num v in">300.000</td><td class="num">—</td><td class="num strong">749.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">16:12</td><td class="strong">Booking Lapangan 2 · 2 jam</td><td><span class="badge blue">Sewa lapangan</span></td>
+                  <td class="mono">BK-20261018-0042</td>
+                  <td class="num v in">200.000</td><td class="num">—</td><td class="num strong">949.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">16:20</td><td class="strong">Belanja shuttlecock (tunai, darurat)</td><td><span class="badge amber">Pembelian</span></td>
+                  <td class="mono">PO-20261018-013</td>
+                  <td class="num">—</td><td class="num v out">150.000</td><td class="num strong">799.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">16:31</td><td class="strong">Penjualan POS (tunai)</td><td><span class="badge violet">POS</span></td>
+                  <td class="mono">TRX-20261018-0038</td>
+                  <td class="num v in">90.000</td><td class="num">—</td><td class="num strong">889.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">16:45</td><td class="strong">Booking Lapangan 1 · 2 jam (member)</td><td><span class="badge blue">Sewa lapangan</span></td>
+                  <td class="mono">BK-20261018-0043</td>
+                  <td class="num v in">180.000</td><td class="num">—</td><td class="num strong">1.069.000</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">17:05</td><td class="strong">Penjualan POS (tunai)</td><td><span class="badge violet">POS</span></td>
+                  <td class="mono">TRX-20261018-0041</td>
+                  <td class="num v in">476.000</td><td class="num">—</td><td class="num strong">1.545.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tfoot">
+            <span class="lbl">Saldo tunai seharusnya</span>
+            <span class="grand">Rp 1.545.000</span>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="card-h"><h3>Kas keluar / petty cash</h3><div class="right"><button class="btn btn-sm">+ Catat</button></div></div>
+            <div class="card-b tight">
+              <div class="list-item">
+                <div class="ic ico amber">🔥</div>
+                <div class="t"><b>Gas + air galon dapur</b><small>15:40 · nota terlampir</small></div>
+                <span class="v out" style="font-weight:700">Rp 85.000</span>
+              </div>
+              <div class="list-item">
+                <div class="ic ico red">🏸</div>
+                <div class="t"><b>Shuttlecock darurat</b><small>16:20 · warung sebelah</small></div>
+                <span class="v out" style="font-weight:700">Rp 150.000</span>
+              </div>
+              <div class="card-b">
+                <div class="alert warn">
+                  <span class="ic">⚠️</span>
+                  <div><b>Nota wajib</b>Pengeluaran tunai tanpa foto nota akan ditandai merah pada laporan kas harian owner.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-h"><h3>Ringkasan metode bayar</h3></div>
+            <div class="card-b stack" style="gap:11px">
+              <div>
+                <div class="row between"><span class="muted-text">Tunai</span><span class="strong">Rp 1.480.000</span></div>
+                <div class="bar" style="margin-top:5px"><span style="width:63%"></span></div>
+              </div>
+              <div>
+                <div class="row between"><span class="muted-text">QRIS</span><span class="strong">Rp 520.000</span></div>
+                <div class="bar" style="margin-top:5px"><span class="blue" style="width:22%"></span></div>
+              </div>
+              <div>
+                <div class="row between"><span class="muted-text">Debit / EDC</span><span class="strong">Rp 342.000</span></div>
+                <div class="bar" style="margin-top:5px"><span class="amber" style="width:15%"></span></div>
+              </div>
+              <div>
+                <div class="row between"><span class="muted-text">Deposit member</span><span class="strong">Rp 0</span></div>
+                <div class="bar" style="margin-top:5px"><span style="width:0%"></span></div>
+              </div>
+              <div class="divider"></div>
+              <div class="row between"><span class="strong">Total semua metode</span><span class="strong" style="font-size:16px">Rp 2.342.000</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rekap harian & riwayat shift -->
+      <div class="card">
+        <div class="tabs" data-tabs="kas">
+          <button data-tab="rekap" class="on">Rekap Kas Harian</button>
+          <button data-tab="riwayat">Riwayat Sesi &amp; Selisih</button>
+          <button data-tab="setoran">Setoran Bank</button>
+        </div>
+
+        <div data-panel="kas/rekap">
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th>Shift</th><th>Petugas</th><th>Jam</th><th class="num">Modal awal</th>
+                  <th class="num">Tunai masuk</th><th class="num">Tunai keluar</th>
+                  <th class="num">Seharusnya</th><th class="num">Fisik</th><th class="num">Selisih</th><th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="strong">Pagi</td><td>Andi (Operator)</td><td class="nowrap">07:00–15:00</td>
+                  <td class="num">200.000</td><td class="num">2.140.000</td><td class="num">145.000</td>
+                  <td class="num">2.195.000</td><td class="num">2.195.000</td>
+                  <td class="num strong" style="color:#047857">0</td>
+                  <td><span class="badge green">Terverifikasi</span></td>
+                </tr>
+                <tr>
+                  <td class="strong">Sore</td><td>Dewi (Kasir)</td><td class="nowrap">15:02–sekarang</td>
+                  <td class="num">300.000</td><td class="num">1.480.000</td><td class="num">235.000</td>
+                  <td class="num strong">1.545.000</td><td class="num">—</td>
+                  <td class="num">—</td>
+                  <td><span class="badge amber">Berjalan</span></td>
+                </tr>
+                <tr>
+                  <td class="strong">Malam</td><td>—</td><td class="nowrap">21:00–24:00</td>
+                  <td class="num">—</td><td class="num">—</td><td class="num">—</td>
+                  <td class="num">—</td><td class="num">—</td><td class="num">—</td>
+                  <td><span class="badge grey">Belum dibuka</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-b" style="border-top:1px solid var(--line)">
+            <div class="grid g4" style="gap:14px">
+              <div><div class="muted-text">Total pendapatan hari ini</div><div style="font-size:19px;font-weight:750">Rp 4.860.000</div></div>
+              <div><div class="muted-text">Total pengeluaran tunai</div><div style="font-size:19px;font-weight:750;color:#b91c1c">Rp 380.000</div></div>
+              <div><div class="muted-text">Non-tunai hari ini</div><div style="font-size:19px;font-weight:750">Rp 862.000</div></div>
+              <div><div class="muted-text">Total selisih kas</div><div style="font-size:19px;font-weight:750;color:#047857">Rp 0</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel="kas/riwayat" style="display:none">
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Kode sesi</th><th>Tanggal</th><th>Shift</th><th>Petugas</th><th class="num">Selisih</th><th>Catatan</th><th>Verifikasi</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">KAS-20261017-MALAM</td><td class="nowrap">17 Okt 2026</td><td>Malam</td><td>Rudi</td><td class="num strong" style="color:#b45309">− 5.000</td><td class="muted">Kurang receh, ditoleransi</td><td><span class="badge green">Owner</span></td></tr>
+                <tr><td class="mono">KAS-20261017-SORE</td><td class="nowrap">17 Okt 2026</td><td>Sore</td><td>Dewi</td><td class="num strong" style="color:#047857">0</td><td class="muted">—</td><td><span class="badge green">Admin</span></td></tr>
+                <tr><td class="mono">KAS-20261017-PAGI</td><td class="nowrap">17 Okt 2026</td><td>Pagi</td><td>Andi</td><td class="num strong" style="color:#047857">0</td><td class="muted">—</td><td><span class="badge green">Admin</span></td></tr>
+                <tr><td class="mono">KAS-20261016-MALAM</td><td class="nowrap">16 Okt 2026</td><td>Malam</td><td>Rudi</td><td class="num strong" style="color:#b91c1c">− 45.000</td><td class="muted">Pembayaran belum dicatat, sudah dikoreksi</td><td><span class="badge red">Butuh tindak lanjut</span></td></tr>
+                <tr><td class="mono">KAS-20261016-SORE</td><td class="nowrap">16 Okt 2026</td><td>Sore</td><td>Dewi</td><td class="num strong" style="color:#047857">+ 2.000</td><td class="muted">Kelebihan pembulatan</td><td><span class="badge green">Admin</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-b">
+            <div class="alert err">
+              <span class="ic">⚠️</span>
+              <div><b>Selisih &gt; Rp 10.000 wajib verifikasi Owner</b>Sesi 16 Okt malam tercatat selisih −Rp 45.000 dengan catatan koreksi. Riwayat ini tidak dapat dihapus kasir.</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel="kas/setoran" style="display:none">
+          <div class="card-b">
+            <div class="row between" style="margin-bottom:14px">
+              <div>
+                <div class="muted-text">Kas fisik saat ini (belum disetor)</div>
+                <div style="font-size:22px;font-weight:750">Rp 1.545.000</div>
+              </div>
+              <button class="btn btn-primary">+ Catat Setoran</button>
+            </div>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead><tr><th>Tanggal</th><th>Bank / Tujuan</th><th>Referensi</th><th class="num">Nominal</th><th>Petugas</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td class="nowrap">17 Okt 2026</td><td>BRI — Rek. Operasional</td><td class="mono">TRF-77821</td><td class="num strong">Rp 6.200.000</td><td>Admin</td><td><span class="badge green">Diterima</span></td></tr>
+                  <tr><td class="nowrap">10 Okt 2026</td><td>Brankas owner</td><td class="mono">SET-0192</td><td class="num strong">Rp 5.400.000</td><td>Owner</td><td><span class="badge green">Diterima</span></td></tr>
+                  <tr><td class="nowrap">3 Okt 2026</td><td>BRI — Rek. Operasional</td><td class="mono">TRF-77104</td><td class="num strong">Rp 4.950.000</td><td>Admin</td><td><span class="badge green">Diterima</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: TUTUP SHIFT ============ -->
+<div class="modal-mask" id="modalTutup">
+  <div class="modal wide">
+    <div class="modal-h">
+      <div><h3>Tutup Shift — KAS-20261018-SORE</h3><div class="sub">Hitung uang fisik per pecahan, sistem menghitung selisih</div></div>
+      <button class="x" onclick="closeModal('modalTutup')">✕</button>
+    </div>
+    <div class="modal-b">
+      <div class="grid g2" style="gap:18px">
+
+        <div class="stack">
+          <h4>Hitung per pecahan</h4>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Pecahan</th><th class="num">Jumlah lembar/koin</th><th class="num">Subtotal</th></tr></thead>
+              <tbody>
+                <tr><td>Rp 100.000</td><td class="num"><input class="input" style="width:74px;text-align:right" value="12"></td><td class="num strong">1.200.000</td></tr>
+                <tr><td>Rp 50.000</td><td class="num"><input class="input" style="width:74px;text-align:right" value="5"></td><td class="num strong">250.000</td></tr>
+                <tr><td>Rp 20.000</td><td class="num"><input class="input" style="width:74px;text-align:right" value="2"></td><td class="num strong">40.000</td></tr>
+                <tr><td>Rp 10.000</td><td class="num"><input class="input" style="width:74px;text-align:right" value="4"></td><td class="num strong">40.000</td></tr>
+                <tr><td>Rp 5.000</td><td class="num"><input class="input" style="width:74px;text-align:right" value="2"></td><td class="num strong">10.000</td></tr>
+                <tr><td>Rp 2.000</td><td class="num"><input class="input" style="width:74px;text-align:right" value="2"></td><td class="num strong">4.000</td></tr>
+                <tr><td>Rp 1.000</td><td class="num"><input class="input" style="width:74px;text-align:right" value="1"></td><td class="num strong">1.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row between" style="padding-top:4px">
+            <span class="strong">Total fisik</span>
+            <span style="font-size:19px;font-weight:750">Rp 1.545.000</span>
+          </div>
+        </div>
+
+        <div class="stack">
+          <h4>Rekonsiliasi</h4>
+          <div class="card" style="box-shadow:none;background:#f8fafc">
+            <div class="card-b stack" style="gap:9px">
+              <div class="sum"><span class="lbl">Modal awal</span><span>Rp 300.000</span></div>
+              <div class="sum"><span class="lbl">Tunai masuk</span><span>+ Rp 1.480.000</span></div>
+              <div class="sum"><span class="lbl">Tunai keluar</span><span>− Rp 235.000</span></div>
+              <div class="sum big"><span>Saldo seharusnya</span><span>Rp 1.545.000</span></div>
+              <div class="sum"><span class="lbl">Hitung fisik</span><span>Rp 1.545.000</span></div>
+              <div class="sum"><span class="lbl strong">Selisih</span><span style="color:#047857;font-weight:750">Rp 0</span></div>
+            </div>
+          </div>
+
+          <div class="alert ok">
+            <span class="ic">✓</span>
+            <div><b>Kas seimbang</b>Boleh ditutup tanpa persetujuan tambahan. Shift berikutnya dibuka dengan modal Rp 1.545.000.</div>
+          </div>
+
+          <div class="field">
+            <label>Catatan shift (opsional)</label>
+            <textarea class="input" rows="2" placeholder="Contoh: 1 transaksi QRIS belum settle, akan dikonfirmasi besok."></textarea>
+          </div>
+
+          <div class="field">
+            <label>Serah terima ke</label>
+            <select class="select"><option>Rudi (Shift Malam)</option><option>Brankas / Owner</option><option>Belum diserahkan</option></select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-f">
+      <button class="btn" onclick="closeModal('modalTutup')">Batal</button>
+      <button class="btn">Cetak Laporan Shift</button>
+      <button class="btn btn-danger" onclick="closeModal('modalTutup')">Tutup Shift</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

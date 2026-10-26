@@ -1,0 +1,7 @@
+# Taste — General Preferences
+- Communicates in Indonesian and expects deliverables (documentation, UI copy, and formal documents like quotation letters) written in Indonesian. Confidence: 0.65
+- Wants key UI screenshots (one per main feature page) included inside the formal proposal/quotation document, and expects embedded images rendered in the same file so the deliverable is self-contained and can be sent as a single file. Confidence: 0.6
+- Targets cloud/shared hosting (e.g. Hostinger) rather than an on-premise local server, and expects the design + implementation plan to be adapted to shared-hosting limits (cron-based scheduling/queue instead of daemons, no WebSocket realtime, browser-based receipt printing). Confidence: 0.55
+- Prefers staff-operated workflows over public self-service surfaces — explicitly rejects building a public-facing booking page in favour of phone, WhatsApp and walk-in handled by operators. Confidence: 0.5
+- Prefers self-contained, no-vendor solutions: wants integrations with third parties removed in favour of manual handling (e.g. cashier-recorded payments instead of payment gateways, staff-sent WhatsApp instead of messaging APIs, cron DB dumps instead of cloud storage) to avoid API keys, subscriptions, and per-transaction fees. Confidence: 0.6
+- Wants client-facing documents (proposals/quotation letters) to break modules and features down into explicit, itemized point-by-point lists in plain, non-technical language so the client can easily understand them. Confidence: 0.55
